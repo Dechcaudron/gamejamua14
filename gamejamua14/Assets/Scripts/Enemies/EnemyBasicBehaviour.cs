@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable {
 
-	public static GameControl GameCtrl;
+	//public static GameControl GameCtrl;
 
 	public int MaxHealth;
 	protected float	health;
@@ -87,7 +87,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable {
 			return; //Yes, return
 		
 		//Direct vision with player? Go chase that little bitch
-		if (gameObject.Ext_DirectRay (HeadTransform.position, PlayerRefs.Player.transform.position, PlayerRefs.Player.collider)) {
+		if (false) { //TODO: fix this
 			StartCoroutine (chasePlayer ());
 		}
 	}
