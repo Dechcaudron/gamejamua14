@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 {
 
-		//public static GameControl GameCtrl;
+		public static GameControl GameCtrl;
 
 		public int MaxHealth;
 		protected float	health;
