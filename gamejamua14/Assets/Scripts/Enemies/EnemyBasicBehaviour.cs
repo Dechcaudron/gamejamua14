@@ -80,16 +80,15 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 				//TODO: fill this
 		}
 
-		void checkPlayerVisibility ()
+	
+		public bool checkLocalPlayer(GameObject LocalPlayer)
 		{
-				//Already chasing the player?
-				if (chasingPlayer)
-						return; //Yes, return
-		
-				//Direct vision with player? Go chase that little bitch
-				if (false) { //TODO: fix this
-//						StartCoroutine (chasePlayer ());
-				}
+			if(LocalPlayer.gameObject.activeInHierarchy){
+				return true;
+			}else
+			{
+				return false;
+			}
 		}
 
 		/*protected IEnumerator chasePlayer ()
