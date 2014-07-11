@@ -7,6 +7,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable {
 
 	public int MaxHealth;
 	protected float	health;
+	protected float damage;
 
 	public bool busy;
 	public bool Damage;
@@ -51,6 +52,22 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable {
 		health = 0;
 		// GameCtrl.ZombiesOnStage--; //TODO: replace 
 		Die = true;
+	}
+
+	public float _Damage
+	{
+		get {
+			return damage;
+		}
+
+		set{
+			damage = value;
+		}
+	}
+
+	public void _Attack(float a_damage)
+	{
+
 	}
 
 	void Start ()
