@@ -1,5 +1,9 @@
 ﻿public interface IAttackable 
 {
-		void _Attack();
+	float _Damage {
+		get;
+		set;
+	}
 
+	void _Attack(float a_damage);
 }
