@@ -15,6 +15,8 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 		public bool Die;
 		public bool chasingPlayer;
 
+		public float speed;
+
 		public int _MaxHealth {
 				get {
 						return MaxHealth;
@@ -81,7 +83,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 		}
 
 	
-		public bool checkLocalPlayer(GameObject LocalPlayer)
+		public bool checkLocalPlayer (GameObject LocalPlayer)
 		{
 			if(LocalPlayer.gameObject.activeInHierarchy){
 				return true;
@@ -91,8 +93,14 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 			}
 		}
 
-		/*protected IEnumerator chasePlayer ()
-	{
+		public void chasePlayer (GameObject a_LocalPlayer, CharacterController a_controller)
+		{
+			transform.LookAt (a_LocalPlayer.transform.position);
+			a_controller.SimpleMove(transform.forward * speed * Time.deltaTime);
+		}
 
-	}*/
+		public void chaseNPC (GameObject npc)
+		{
+			transform.LookAt (npc.transform.position);
+		}
 }
