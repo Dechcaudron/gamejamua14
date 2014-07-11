@@ -46,15 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BasicCharacterBehaviour.cs" />
-     <Compile Include="Assets\CharacterManagement.cs" />
-     <Compile Include="Assets\GameControl.cs" />
-     <Compile Include="Assets\RoomBehaviour.cs" />
+     <Compile Include="Assets\Scripts\BasicCharacterBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CharacterManagement.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyBasicBehaviour.cs" />
+     <Compile Include="Assets\Scripts\GameControl.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IAttackable.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IBreakable.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IKillable.cs" />
+     <Compile Include="Assets\Scripts\RoomBehaviour.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
