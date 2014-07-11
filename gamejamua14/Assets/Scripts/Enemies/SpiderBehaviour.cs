@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpiderBehaviour : MonoBehaviour, EnemyBasicBehaviour {
+public class SpiderBehaviour : EnemyBasicBehaviour {
 	
 	public bool isLocalPlayer;
 	public static GameControl GameCtrl;
@@ -29,7 +29,7 @@ public class SpiderBehaviour : MonoBehaviour, EnemyBasicBehaviour {
 			isLocalPlayer = true;
 		} else 
 		{
-			isLocalPlayer = true;
+			isLocalPlayer = false;
 		}
 	}
 
