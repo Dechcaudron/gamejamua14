@@ -8,5 +8,5 @@ public interface IDamageable
 				set;
 		}
 
-		void _TakeDamage (float a_damage, Vector3 a_hitPoint);
+		void _TakeDamage (float a_damage);
 }

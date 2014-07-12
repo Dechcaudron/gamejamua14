@@ -11,7 +11,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 		protected float damage;
 
 		public bool busy;
-		public bool Damage;
+		//public bool Damage;
 		public bool Die;
 		public bool chasingPlayer;
 
@@ -41,10 +41,9 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 				set;
 		}
 
-		public void _TakeDamage (float a_damage, Vector3 a_hitPoint)
+		public void _TakeDamage (float a_damage)
 		{
-				Damage = true;
-				// StartCoroutine (TestCoroutine ()); //TODO: replace
+				//Damage = true;
 				health -= a_damage;
 				if (health <= 0)
 						_Die ();
@@ -53,7 +52,6 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 		public void _Die ()
 		{
 				health = 0;
-				// GameCtrl.ZombiesOnStage--; //TODO: replace 
 				Die = true;
 		}
 
@@ -93,15 +91,15 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 				}
 		}
 
-		public void chaseObjective (GameObject a_Objective, Rigidbody a_controller)
+		public void chaseObjective (GameObject a_Objective)
 		{
-				transform.LookAt (a_Objective.transform.position);
-		
+				transform.LookAt (a_Objective.transform.position, Vector3.up);
+						
 				Quaternion rotation = transform.rotation;
 				rotation.x = 0;
 				rotation.z = 0;
 				transform.rotation = rotation;
-				//a_controller.SimpleMove (transform.forward * speed * Time.deltaTime);
-				a_controller.transform.Translate (transform.forward * speed * Time.deltaTime);
+
+				transform.Translate (transform.forward * speed * Time.deltaTime, Space.World);
 		}
 }

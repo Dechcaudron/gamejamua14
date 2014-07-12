@@ -46,7 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BasicCharacterBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CharacterBehaviours\BasicCharacterBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CharacterBehaviours\NightmareCharacterBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CharacterBehaviours\SpiderCharacterBehaviour.cs" />
      <Compile Include="Assets\Scripts\CharacterManagement.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyBasicBehaviour.cs" />
      <Compile Include="Assets\Scripts\Enemies\SpiderBehaviour.cs" />
@@ -64,7 +66,6 @@
      <Compile Include="Assets\Scripts\RoomBehaviours\NightmareRoomBehaviour.cs" />
      <Compile Include="Assets\Scripts\RoomBehaviours\RoomBehaviour.cs" />
      <Compile Include="Assets\Scripts\RoomBehaviours\SpiderRoomBehaviour.cs" />
-     <Compile Include="Assets\Scripts\SpiderCharacterBehaviour.cs" />
      <Compile Include="Assets\Scripts\StaticRefs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -27,9 +27,9 @@ public class SpiderBehaviour : EnemyBasicBehaviour
 		{
 				checkPlayer ();
 				if (isLocalPlayer) {
-					chaseObjective (SpiderPlayer, rigidbody);
+						chaseObjective (SpiderPlayer);
 				} else {
-					chaseObjective (NPC, rigidbody);
+						chaseObjective (NPC);
 				}
 		}
 

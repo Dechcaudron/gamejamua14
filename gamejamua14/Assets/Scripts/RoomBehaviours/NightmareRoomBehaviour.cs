@@ -3,7 +3,12 @@ using System.Collections;
 
 public abstract class NightmareRoomBehaviour : RoomBehaviour
 {
+
 		public const float MadnessToBoss = 50f;
+		public const float LIGHT_INTENSITY_MULTIPLIER = 80f;
+
+		public Light MyLight;
+
 
 		public float MadnessPercentage {
 				get {
@@ -22,6 +27,8 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 
 		protected virtual void FixedUpdate ()
 		{
+				MyLight.intensity = MadnessPercentage * LIGHT_INTENSITY_MULTIPLIER;
+
 				if (Madness < MadnessToBoss)
 						Madness += gameControl.MadnessIncreaseSpeed;
 
