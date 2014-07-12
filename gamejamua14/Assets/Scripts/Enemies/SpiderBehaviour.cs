@@ -115,7 +115,6 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		{
 				//print (a_collider);
 				if (a_collider.gameObject.tag == "Player") {
-						print ("fuck");
 					
 						SpiderPlayer.GetComponent<SpiderCharacterBehaviour> ()._TakeDamage (damage);
 						endAttack ();
@@ -130,5 +129,12 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		public void ExtTriggerExit (Collider a_collider)
 		{
 		
+		}
+
+		void OnTriggerExit (Collider a_collider)
+		{
+				if (a_collider.gameObject.name == "TriggerSpiders") {
+						_Die ();
+				}
 		}
 }
