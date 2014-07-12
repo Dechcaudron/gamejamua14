@@ -10,6 +10,8 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		public float BuriedAmount;
 		public float RiseSpeed;
 		public GameObject AttackCollider;
+
+		public Animator SpiderAnimator;
 	
 		protected Transform spawn;
 
@@ -41,7 +43,10 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 						if (isLocalPlayer) {
 								chaseObjective (SpiderPlayer);
 
-								if (Vector3.Distance (SpiderPlayer.transform.position, transform.position) < 2f) {
+								SpiderAnimator.SetFloat (HashIDs.Speed, 1f);
+
+								if (Vector3.Distance (SpiderPlayer.transform.position, transform.position) < StopDistance) {
+										SpiderAnimator.SetTrigger (HashIDs.Attack);
 										InvokeRepeating ("attack", 1f, 2f);
 										InvokeRepeating ("endAttack", 1.2f, 2f);
 								} else {
@@ -52,8 +57,14 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 						} else {
 								CancelInvoke ("attack");
 								CancelInvoke ("endAttack");
-								chaseObjective (NPC);
+								if (Vector3.Distance (NPC.transform.position, transform.position) > StopDistance + 1) {
+										chaseObjective (NPC);
+								} else {
+										SpiderAnimator.SetTrigger (HashIDs.GoIdle);
+								}
 						}
+				} else {
+						SpiderAnimator.SetTrigger (HashIDs.Die);
 				}
 		}
 
@@ -90,9 +101,12 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 
 		public void ExtTriggerEnter (Collider a_collider)
 		{
+				//print (a_collider);
 				if (a_collider.gameObject.tag == "Player") {
-						//print ("fuck");
+						print ("fuck");
+					
 						SpiderPlayer.GetComponent<SpiderCharacterBehaviour> ()._TakeDamage (damage);
+						endAttack ();
 				}
 		}
 

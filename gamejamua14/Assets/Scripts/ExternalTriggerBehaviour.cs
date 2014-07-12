@@ -19,7 +19,6 @@ public class ExternalTriggerBehaviour : MonoBehaviour
 	
 		void OnTriggerEnter (Collider a_collider)
 		{
-				//print (toTrigger);
 				toTrigger.ExtTriggerEnter (a_collider);
 		}
 

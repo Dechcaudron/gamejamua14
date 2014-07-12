@@ -18,6 +18,8 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 		protected float
 				madnessCharge;
 
+		public float StopDistance;
+
 		public bool busy;
 		public bool Die;
 		public bool chasingPlayer;
@@ -123,16 +125,17 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 
 		public void chaseObjective3D (GameObject a_Objective)
 		{
-			transform.LookAt (a_Objective.transform.position, Vector3.up);
+				transform.LookAt (a_Objective.transform.position, Vector3.up);
 			
-			Quaternion rotation = transform.rotation;
-			transform.rotation = rotation;
+				Quaternion rotation = transform.rotation;
+				transform.rotation = rotation;
 			
-			transform.Translate (transform.forward * speed * Time.deltaTime, Space.World);
+				if (Vector3.Distance (transform.position, a_Objective.transform.position) > StopDistance)
+						transform.Translate (transform.forward * speed * Time.deltaTime, Space.World);
 		}
 		
 		public void rotateArroundObjective (GameObject a_Objective)
 		{
-			//TODO: Do my magic
+				//TODO: Do my magic
 		}
 }
