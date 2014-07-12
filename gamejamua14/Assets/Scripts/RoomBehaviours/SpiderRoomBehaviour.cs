@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SpiderRoomBehaviour : NightmareRoomBehaviour
 {
@@ -10,10 +11,11 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 		public Transform[] WebSpawns;
 		public float SecondsBetweenWaves;
 		private int currentCount;
-
+		public static List<GameObject> Mobs;
+	
 		void Start ()
 		{
-			
+			Mobs = LightMobs;
 		}
 
 		protected override void FixedUpdate ()
@@ -71,7 +73,7 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 
 		void spawnSpider (Transform a_spawn)
 		{
-				if (LightMobs.Count < MAX_LIGHTMOBS_PER_SCENE) {
+				if (LightMobs.Count < NightmareRoomBehaviour.MAX_LIGHTMOBS_PER_SCENE) {
 						GameObject t_newSpider = GameObject.Instantiate (Spider, a_spawn.position, Quaternion.identity) as GameObject;
 						LightMobs.Add (t_newSpider);
 						t_newSpider.GetComponent<SpiderBehaviour> ().SetSpawn (a_spawn);

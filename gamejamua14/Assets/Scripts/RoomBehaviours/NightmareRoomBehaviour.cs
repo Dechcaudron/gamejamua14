@@ -49,6 +49,7 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 		public void ChangeToBoss(){
 			for(int i = 0; i<LightMobs.Count; i++){
 				Destroy(LightMobs[i]);
+				LightMobs.Remove(LightMobs[i]);
 			}
 			if(Boss != null)
 		   	{
