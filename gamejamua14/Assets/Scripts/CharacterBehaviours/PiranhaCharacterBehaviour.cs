@@ -10,7 +10,7 @@ public class PiranhaCharacterBehaviour : NightmareCharacterBehaviour, IReceivesE
 	
 	protected override void Start ()
 	{
-		StaticRefs.Refs.PiranhasPlayer = gameObject;
+		StaticRefs.Refs.SharkPlayer = gameObject;
 		gameObject.SetActive (false);
 	}
 	
