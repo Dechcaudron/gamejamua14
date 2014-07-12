@@ -31,7 +31,6 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 						isAttacking = false;
 
 						if (a_collider.tag == "Enemy") {
-//								print ("damage");
 								a_collider.GetComponent<EnemyBasicBehaviour> ()._TakeDamage (AttackDamage);
 						}
 				}
