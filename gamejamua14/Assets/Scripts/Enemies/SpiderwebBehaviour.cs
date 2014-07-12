@@ -7,6 +7,8 @@ public class SpiderwebBehaviour : MonoBehaviour
 		public GameObject Spider;
 		public float SpawnTime;
 
+		public Transform[] Spawns;
+
 		private int counter;
 
 		void Start ()
@@ -24,8 +26,6 @@ public class SpiderwebBehaviour : MonoBehaviour
 
 		private void spawn ()
 		{
-				GameObject newSpider = GameObject.Instantiate (Spider) as GameObject;
-				
-				newSpider.transform.position = transform.position;
+				GameObject newSpider = GameObject.Instantiate (Spider, Spawns.GetRandomTransform ().position, Quaternion.identity) as GameObject;
 		}
 }

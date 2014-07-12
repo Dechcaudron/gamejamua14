@@ -43,6 +43,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 
 		public void _TakeDamage (float a_damage)
 		{
+				//print ("ouch");
 				//Damage = true;
 				health -= a_damage;
 				if (health <= 0)

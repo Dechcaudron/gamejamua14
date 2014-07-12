@@ -19,14 +19,19 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 				base.ProcessMouseClicks ();
 
 				if (Input.GetMouseButtonDown (0)) {
+						isAttacking = true;
 						SwordAnimator.SetTrigger (HashIDs.Attack);
 				}
 		}
 
 		public void ExtTriggerEnter (Collider a_collider)
 		{
+//				print ("triggerENter");
 				if (isAttacking) {
+						isAttacking = false;
+
 						if (a_collider.tag == "Enemy") {
+//								print ("damage");
 								a_collider.GetComponent<EnemyBasicBehaviour> ()._TakeDamage (AttackDamage);
 						}
 				}
