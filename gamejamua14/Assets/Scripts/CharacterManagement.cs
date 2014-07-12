@@ -5,6 +5,7 @@ public class CharacterManagement : MonoBehaviour
 {
 		public GameObject BasicPlayer;
 		public GameObject SpidersPlayer;
+		public GameObject SharksPlayer;
 
 		private	bool expectingChange;
 		private GameObject currentPlayer;
