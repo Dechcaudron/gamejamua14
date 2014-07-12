@@ -8,15 +8,18 @@ public class PiranhaRoomBehaviour : NightmareRoomBehaviour {
 	public GameObject PiranhaSpot;
 	public Transform[] PiranhaSpawns;
 	public Transform[] WebSpawns;
+	public float SecondsBetweenWaves;
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
+		base.Start ();
 	
+		InvokeRepeating ("SpawnWave", SecondsBetweenWaves, SecondsBetweenWaves);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	protected override void FixedUpdate ()
+	{
+		base.FixedUpdate ();
 	}
 
 	void SpawnWave ()
