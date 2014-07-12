@@ -35,8 +35,17 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 						checkPlayer ();
 						if (isLocalPlayer) {
 								chaseObjective3D (PiranhasPlayer);
+								if (Vector3.Distance (PiranhasPlayer.transform.position, transform.position) < StopDistance) {
+										if (!IsInvoking ("attack")) {
+												//Attack
+												Invoke ("attack", 0.8f);
+												Invoke ("endAttack", 1f);
+										}
+								} else {
+										CancelInvoke ("attack");
+										CancelInvoke ("endAttack");
+								}
 
-				
 						} else {
 								CancelInvoke ("attack");
 								CancelInvoke ("endAttack");
@@ -69,6 +78,7 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 				if (a_collider.gameObject.tag == "Player") {
 						PiranhasPlayer.GetComponent<SharkCharacterBehaviour> ()._TakeDamage (damage);
 				}
+				endAttack ();
 		}
 	
 		public void ExtTriggerStay (Collider a_collider)
