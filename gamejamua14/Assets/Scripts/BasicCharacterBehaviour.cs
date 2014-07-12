@@ -33,6 +33,7 @@ public class BasicCharacterBehaviour : MonoBehaviour
 		void Update ()
 		{
 				ProcessVerticalMovement ();
+				ProcessMouseClicks ();
 		}
 
 		protected void ProcessInput ()
@@ -67,6 +68,11 @@ public class BasicCharacterBehaviour : MonoBehaviour
 				if (verticalSpeed < 0) {
 						verticalSpeed = 0;
 				}
+		}
+
+		protected virtual void ProcessMouseClicks ()
+		{
+
 		}
 
 
