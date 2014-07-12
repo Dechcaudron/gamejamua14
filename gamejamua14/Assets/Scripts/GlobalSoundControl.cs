@@ -8,6 +8,7 @@ public class GlobalSoundControl : MonoBehaviour
 		public AudioClip[] SpiderClips;
 		public AudioClip[] PiranhasClips;
 		public AudioClip[] PanelsClips;
+		public AudioClip[] RobotsClips;
 		public AudioClip DieClips;
 		[Range(0.1f, 1f)]
 		public float
@@ -139,7 +140,17 @@ public class GlobalSoundControl : MonoBehaviour
 
 		public void ChangeToPiranhas ()
 		{
-				changeTheme (SpiderClips);			
+				changeTheme (PiranhasClips);			
+		}
+
+		public void ChangeToPanels ()
+		{
+			changeTheme (PanelsClips);			
+		}
+
+		public void ChangeToRobots ()
+		{
+			changeTheme (RobotsClips);			
 		}
 	
 		public void ChangeToAtmosphere ()
