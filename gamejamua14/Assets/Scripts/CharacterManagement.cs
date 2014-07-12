@@ -25,8 +25,8 @@ public class CharacterManagement : MonoBehaviour
 		{
 
 				switch (a_collider.name) {
-				case "TriggerSpidersExt":
-						if (BossSpiderBehaviour.IsAwake == true) {
+				case "SpiderBossTrigger":
+						if (BossSpiderBehaviour.IsAwake == true && currentPlayer != SpidersPlayer) {
 								currentPlayer.SetActive (false);
 								SpidersPlayer.SetActive (true);
 								currentPlayer = SpidersPlayer;
