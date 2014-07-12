@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpiderBehaviour : EnemyBasicBehaviour
+public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 {
 	
 		public bool isLocalPlayer;
@@ -9,6 +9,7 @@ public class SpiderBehaviour : EnemyBasicBehaviour
 		public static GameObject NPC;
 		public float BuriedAmount;
 		public float RiseSpeed;
+		public GameObject AttackCollider;
 
 		protected Rigidbody rigidbody;
 		protected Transform spawn;
@@ -41,7 +42,18 @@ public class SpiderBehaviour : EnemyBasicBehaviour
 						checkPlayer ();
 						if (isLocalPlayer) {
 								chaseObjective (SpiderPlayer);
+
+								if (Vector3.Distance (SpiderPlayer.transform.position, transform.position) < 0.8f) {
+										InvokeRepeating ("attack", 1f, 2f);
+										InvokeRepeating ("endAttack", 1.2f, 2f);
+								} else {
+										CancelInvoke ("attack");
+										CancelInvoke ("endAttack");
+								}
+
 						} else {
+								CancelInvoke ("attack");
+								CancelInvoke ("endAttack");
 								chaseObjective (NPC);
 						}
 				}
@@ -68,4 +80,31 @@ public class SpiderBehaviour : EnemyBasicBehaviour
 				}
 		}
 
+		protected void attack ()
+		{
+				AttackCollider.SetActive (true);
+		}
+
+		protected void endAttack ()
+		{
+				AttackCollider.SetActive (false);
+		}
+
+		public void ExtTriggerEnter (Collider a_collider)
+		{
+				if (a_collider.gameObject.tag == "Player") {
+						SpiderPlayer.GetComponent<SpiderCharacterBehaviour> ()._TakeDamage (damage);
+				}
+
+		}
+
+		public void ExtTriggerStay (Collider a_collider)
+		{
+		
+		}
+
+		public void ExtTriggerExit (Collider a_collider)
+		{
+		
+		}
 }

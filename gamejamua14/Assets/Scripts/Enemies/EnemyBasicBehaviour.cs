@@ -8,7 +8,9 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 
 		public int MaxHealth;
 		protected float	health;
-		protected float damage;
+		[SerializeField]
+		protected float
+				damage;
 
 		public bool busy;
 		//public bool Damage;

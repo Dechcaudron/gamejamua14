@@ -26,6 +26,8 @@ public class SpiderwebBehaviour : MonoBehaviour
 
 		private void spawn ()
 		{
-				GameObject newSpider = GameObject.Instantiate (Spider, Spawns.GetRandomTransform ().position, Quaternion.identity) as GameObject;
+				Transform t_spawnPoint = Spawns.GetRandomTransform ();
+				GameObject newSpider = GameObject.Instantiate (Spider, t_spawnPoint.position, Quaternion.identity) as GameObject;
+				newSpider.GetComponent<SpiderBehaviour> ().SetSpawn (t_spawnPoint);
 		}
 }
