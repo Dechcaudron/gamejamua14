@@ -50,7 +50,7 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 								//Spiderwebs
 								GameObject t_newWeb = GameObject.Instantiate (Spiderweb) as GameObject;
 
-								t_newWeb.transform.position = SpiderSpawns.GetRandomTransform ().position;
+								t_newWeb.transform.position = WebSpawns.GetRandomTransform ().position;
 						}
 				} else {
 						//Spawn the shitload
@@ -62,7 +62,7 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 								//Spiderwebs
 								GameObject t_newWeb = GameObject.Instantiate (Spiderweb) as GameObject;
 					
-								t_newWeb.transform.position = SpiderSpawns.GetRandomTransform ().position;
+								t_newWeb.transform.position = WebSpawns.GetRandomTransform ().position;
 						}
 				}
 			
