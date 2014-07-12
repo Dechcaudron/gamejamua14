@@ -10,9 +10,11 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		public float BuriedAmount;
 		public float RiseSpeed;
 		public GameObject AttackCollider;
-
+		public AudioClip[] DieSounds;
+		public AudioClip[] AttackSounds;
+		public AudioClip[] DamageSounds;
+		public AudioSource AudioSource;
 		public Animator SpiderAnimator;
-	
 		protected Transform spawn;
 
 		// Use this for initialization
@@ -27,12 +29,6 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 				base.Start ();
 
 				transform.Translate (-Vector3.up * BuriedAmount);
-		}
-	
-		// Update is called once per frame
-		void Update ()
-		{
-	
 		}
 
 		void FixedUpdate ()
@@ -51,6 +47,8 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 												SpiderAnimator.SetTrigger (HashIDs.Attack);
 												Invoke ("attack", 0.8f);
 												Invoke ("endAttack", 1f);
+												AudioSource.clip = AttackSounds [Random.Range (0, DieSounds.Length)];
+												AudioSource.Play ();
 										}
 
 								} else {
@@ -80,6 +78,8 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		public override void _Die ()
 		{
 				base._Die ();
+				AudioSource.clip = DieSounds [Random.Range (0, DieSounds.Length)];
+				AudioSource.Play ();
 				myRoomBehaviour.LightMobs.Remove (gameObject);
 		}
 
@@ -113,7 +113,6 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 
 		public void ExtTriggerEnter (Collider a_collider)
 		{
-				//print (a_collider);
 				if (a_collider.gameObject.tag == "Player") {
 					
 						SpiderPlayer.GetComponent<SpiderCharacterBehaviour> ()._TakeDamage (damage);
