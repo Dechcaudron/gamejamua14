@@ -36,7 +36,7 @@ public abstract class NightmareCharacterBehaviour : BasicCharacterBehaviour, IDa
 		public void _TakeDamage (float a_damage)
 		{
 				_Health -= a_damage;
-				//print ("Players health:" + _Health);
+				print ("Players health:" + _Health);
 
 				if (_Health <= 0)
 						_Die ();

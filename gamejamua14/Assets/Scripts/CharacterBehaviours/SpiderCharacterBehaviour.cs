@@ -10,6 +10,8 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 
 		protected override void Start ()
 		{
+				base.Start ();
+
 				StaticRefs.Refs.SpiderPlayer = gameObject;
 				gameObject.SetActive (false);
 		}
