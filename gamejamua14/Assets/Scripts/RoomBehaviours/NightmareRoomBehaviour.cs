@@ -16,6 +16,12 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 		public bool isBossAwake = false;
 		public Light MyLight;
 		private bool isOpen;
+		public const int BOSS_MUSIC_SPIDER = 0;
+		public const int BOSS_MUSIC_SHARK = 1;
+		public const int BOSS_MUSIC_PANEL = 2;
+		public const int BOSS_MUSIC_ROBOT = 3;
+		public const int BOSS_MUSIC_NORMAL = 4;
+		public int CurrentBossTheme = 0;
 
 		protected virtual void Start ()
 		{
@@ -87,6 +93,7 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 				if (Boss != null) {
 						isBossAwake = true;
 						Boss.SetActive (true);
+						changeMusicTheme ();
 				}
 		}
 
@@ -100,5 +107,10 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 		{	
 				Boss.SetActive (false);
 				Madness = 0;
+		}
+
+		private void changeMusicTheme ()
+		{
+			StaticRefs.Refs.GlobalSound.ChangeToBoss (CurrentBossTheme);
 		}
 }

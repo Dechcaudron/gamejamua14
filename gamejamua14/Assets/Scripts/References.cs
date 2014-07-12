@@ -10,6 +10,8 @@ public class References : MonoBehaviour
 		public GameObject Smoke;
 		public GameObject Bubbles;
 
+		public GlobalSoundControl GlobalSound;
+
 		void Awake ()
 		{
 				StaticRefs.Refs = this;

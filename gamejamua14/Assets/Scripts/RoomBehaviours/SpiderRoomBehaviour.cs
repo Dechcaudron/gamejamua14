@@ -15,7 +15,7 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 		protected override void Start ()
 		{
 				base.Start ();
-
+				CurrentBossTheme = BOSS_MUSIC_SPIDER;
 				SpiderBehaviour.myRoomBehaviour = this;
 				SpiderwebBehaviour.myRoomBehaviour = this;
 

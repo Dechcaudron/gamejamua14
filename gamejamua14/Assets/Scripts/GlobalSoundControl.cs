@@ -12,14 +12,15 @@ public class GlobalSoundControl : MonoBehaviour
 		public AudioClip[] BossesClips;
 		public AudioClip DieClips;
 		[Range(0.1f, 1f)]
-		public float
+		public  float
 				fadeSteps;
-		private int currentAudioSource;
-		private AudioClip[] CurrentTheme;
-		private bool switchingTheme;
+		private  int currentAudioSource;
+		private  AudioClip[] CurrentTheme;
+		private  bool switchingTheme;
 	
 		void Start ()
 		{
+				StaticRefs.Refs.GlobalSound = this;
 				currentAudioSource = 0;
 				switchingTheme = false;
 				CurrentTheme = AtmosphereClips;
@@ -146,17 +147,22 @@ public class GlobalSoundControl : MonoBehaviour
 
 		public void ChangeToPanels ()
 		{
-			changeTheme (PanelsClips);			
+				changeTheme (PanelsClips);			
 		}
 
 		public void ChangeToRobots ()
 		{
-			changeTheme (RobotsClips);			
+				changeTheme (RobotsClips);			
 		}
 	
 		public void ChangeToAtmosphere ()
 		{
 				changeTheme (AtmosphereClips);
+		}
+		
+		public void ChangeToBoss (int theme)
+		{
+				PlayClip (theme, BossesClips);
 		}
 	
 }
