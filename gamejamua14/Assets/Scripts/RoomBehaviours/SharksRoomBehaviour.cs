@@ -6,10 +6,9 @@ public class SharksRoomBehaviour : NightmareRoomBehaviour
 
 		public float EnemyDensity;
 		public GameObject Piranha;
-		public GameObject PiranhaSpot;
 		public GameObject Shark;
 		public Transform[] PiranhaSpawns;
-		public Transform[] PiranhaSpotSpawns;
+		public Transform[] SharkSpawns;
 		public float SecondsBetweenWaves;
 
 		// Use this for initialization
@@ -43,10 +42,10 @@ public class SharksRoomBehaviour : NightmareRoomBehaviour
 								spawnPiranha (PiranhaSpawns.GetRandomTransform ());
 						}
 						while (t_leftToSpawn-->0) {					
-								//piranhaspots
-								GameObject t_newSpot = GameObject.Instantiate (PiranhaSpot) as GameObject;
+								//Shark
+								GameObject t_newSpot = GameObject.Instantiate (Shark) as GameObject;
 				
-								t_newSpot.transform.position = PiranhaSpotSpawns.GetRandomTransform ().position;
+								t_newSpot.transform.position = SharkSpawns.GetRandomTransform ().position;
 						}
 				} else {
 						//Spawn the shitload
@@ -58,7 +57,7 @@ public class SharksRoomBehaviour : NightmareRoomBehaviour
 								//Shark
 								GameObject t_newSpot = GameObject.Instantiate (Shark) as GameObject;
 				
-								t_newSpot.transform.position = PiranhaSpotSpawns.GetRandomTransform ().position;
+								t_newSpot.transform.position = SharkSpawns.GetRandomTransform ().position;
 						}
 				}
 		

@@ -1,41 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BossSpiderBehaviour : EnemyBasicBehaviour
+public class BossSpiderBehaviour : BasicBossBehaviour
 {
-		public static GameObject Real_NPC;
-		public Animator SpiderAnimator;
-	
-		void Awake ()
-		{
-				Real_NPC = GameObject.Find ("SpiderRealNPC");
-		}
-
-		protected override void Start ()
-		{
-				base.Start ();		
-		}
-
-		void FixedUpdate ()
-		{
-				if (health > 0) {
-						SpiderAnimator.SetFloat (HashIDs.Speed, 1f);
-			
-						if (!IsInvoking ("attack")) {
-								SpiderAnimator.SetTrigger (HashIDs.Attack);
-								Invoke ("attack", 0.8f);
-								Invoke ("endAttack", 1f);
-						}
-		
-				} else {
-						resetScenario ();
-				}
-		}
-
-		void resetScenario ()
-		{
-				this.gameObject.SetActive (false);
-		}
+		public float StartHeight;
+		public float EndHeight;
+		public float DropSpeed;
 
 		protected void attack ()
 		{
@@ -45,5 +15,22 @@ public class BossSpiderBehaviour : EnemyBasicBehaviour
 		protected void endAttack ()
 		{
 				//AttackCollider.SetActive (false);
+		}
+
+		void FixedUpdate ()
+		{
+				transform.position = new Vector3 (transform.position.x, Mathf.Lerp (transform.position.y, EndHeight, DropSpeed * Time.deltaTime), transform.position.z);
+		}
+
+		void OnEnable ()
+		{
+			
+		}
+
+		void OnDisable ()
+		{
+				Vector3 newPosition = transform.position;
+				newPosition.y = StartHeight;
+				transform.position = newPosition;
 		}
 }

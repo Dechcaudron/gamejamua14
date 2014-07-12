@@ -11,8 +11,8 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 		public static int MAX_LIGHTMOBS_PER_SCENE = 20;
 		public GameObject Walls;
 		public float WallSpeed;
-		public Transform OpenPosition;
-		public Transform ClosedPosition;
+		public float OpenHeight;
+		public float ClosedHeight;
 		public bool isBossAwake = false;
 		public Light MyLight;
 		private bool isOpen;
@@ -56,22 +56,24 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 
 		protected virtual void FixedUpdate ()
 		{
-				MyLight.intensity = MadnessPercentage * LIGHT_INTENSITY_MULTIPLIER;
+				if (!isBossAwake) {
+						MyLight.intensity = MadnessPercentage * LIGHT_INTENSITY_MULTIPLIER;
 
-				if (isOpen) {
-						Walls.transform.position = Vector3.Lerp (Walls.transform.position, OpenPosition.position, WallSpeed);
-				} else {
-						Walls.transform.position = Vector3.Lerp (Walls.transform.position, ClosedPosition.position, WallSpeed);
+						if (isOpen) {
+								Walls.transform.position = new Vector3 (Walls.transform.position.x, Mathf.Lerp (Walls.transform.position.y, OpenHeight, WallSpeed), Walls.transform.position.z);
+						} else {
+								Walls.transform.position = new Vector3 (Walls.transform.position.x, Mathf.Lerp (Walls.transform.position.y, ClosedHeight, WallSpeed), Walls.transform.position.z);
+						}
+
+						if (Madness < MadnessToBoss)
+								Madness += gameControl.MadnessIncreaseSpeed;
+
+						if (Madness > MadnessToBoss)
+								Madness = MadnessToBoss;
+
+						if (MadnessPercentage >= 1)
+								ChangeToBoss ();
 				}
-
-				if (Madness < MadnessToBoss)
-						Madness += gameControl.MadnessIncreaseSpeed;
-
-				if (Madness > MadnessToBoss)
-						Madness = MadnessToBoss;
-
-				if (MadnessPercentage >= 1)
-						ChangeToBoss ();
 		}
 
 		public void ChangeToBoss ()
@@ -79,11 +81,19 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 
 				for (int i = 0; i<LightMobs.Count; i++) {
 						Destroy (LightMobs [i]);
-						LightMobs.Remove (LightMobs [i]);
 				}
+				LightMobs = new List<GameObject> ();
+
 				if (Boss != null) {
+						isBossAwake = true;
 						Boss.SetActive (true);
 				}
+		}
+
+		public void ChangeToNormal ()
+		{
+				isBossAwake = false;
+				Boss.SetActive (false);
 		}
 
 		public void ResetSector ()
