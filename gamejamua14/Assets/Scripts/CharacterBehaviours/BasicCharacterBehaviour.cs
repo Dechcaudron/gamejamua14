@@ -42,7 +42,7 @@ public class BasicCharacterBehaviour : MonoBehaviour
 
 				t_movement += Input.GetAxis ("Vertical") * MovementSpeed * transform.forward;
 				t_movement += Input.GetAxis ("Horizontal") * MovementSpeed * transform.right;
-				t_movement.y = myCharacterController.velocity.y + Physics.gravity.y + verticalSpeed;
+				t_movement.y = myCharacterController.velocity.y + Physics.gravity.y * Time.deltaTime * 3.5f + verticalSpeed;
 
 				
 

@@ -39,6 +39,11 @@ public class CharacterManagement : MonoBehaviour
 						BasicPlayer.SetActive (true);
 						currentPlayer = BasicPlayer;
 						break;
+
+				case "TriggerSharks":
+						SharksPlayer.SetActive (true);
+						currentPlayer = SharksPlayer;
+						break;
 				}
 
 				//End the change
