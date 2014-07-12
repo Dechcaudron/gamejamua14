@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
 public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExternalTrigger
 {
 		public Animator SwordAnimator;
 		public float AttackDamage;
-
+		public AudioClip[] DieSounds;
+		public AudioClip[] AttackSounds;
+		public AudioClip[] DamageSounds;
+		public AudioSource AudioSource;
 		private bool isAttacking;
 
 		protected override void Start ()
@@ -21,41 +23,29 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 		{
 				base.ProcessMouseClicks ();
 
-				if (Input.GetMouseButtonDown (0) && !IsInvoking ("cancelAttack")) {
+				if (Input.GetMouseButtonDown (0)) {
 						isAttacking = true;
 						SwordAnimator.SetTrigger (HashIDs.Attack);
-						Invoke ("cancelAttack", 0.6f);
-				}
-		}
+						AudioSource.clip = AttackSounds [Random.Range (0, DieSounds.Length)];
+						AudioSource.Play ();
 
-		void cancelAttack ()
-		{
-				isAttacking = false;
+				}
 		}
 
 		public void ExtTriggerEnter (Collider a_collider)
 		{
-				//print ("triggerENter");
-				if (a_collider.isTrigger)
-						return;
-
 				if (isAttacking) {
 						isAttacking = false;
-						
+
 						if (a_collider.tag == "Enemy") {
-								try {
-										a_collider.GetComponent<EnemyBasicBehaviour> ()._TakeDamage (AttackDamage);
-								} catch (NullReferenceException e) {
-										a_collider.GetComponent<BasicBossBehaviour> ()._TakeDamage (AttackDamage);
-										//print (a_collider.GetComponent<BasicBossBehaviour> ()._Health);
-								}
+								a_collider.GetComponent<EnemyBasicBehaviour> ()._TakeDamage (AttackDamage);
 						}
 				}
 		}
 
 		public void ExtTriggerStay (Collider a_collider)
 		{
-				ExtTriggerEnter (a_collider);
+		
 		}
 
 		public void ExtTriggerExit (Collider a_collider)
