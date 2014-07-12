@@ -13,9 +13,8 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 		public float WallSpeed;
 		public Transform OpenPosition;
 		public Transform ClosedPosition;
-
+		public bool isBossAwake = false;
 		public Light MyLight;
-
 		private bool isOpen;
 
 		protected virtual void Start ()
@@ -31,7 +30,6 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 		}
 
 		protected float Madness;
-
 		protected GameControl gameControl;
 		
 		void Awake ()
@@ -74,7 +72,7 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 
 				if (MadnessPercentage >= 1)
 						ChangeToBoss ();
-		} 
+		}
 
 		public void ChangeToBoss ()
 		{
@@ -86,5 +84,11 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 				if (Boss != null) {
 						Boss.SetActive (true);
 				}
+		}
+
+		public void ResetSector ()
+		{	
+				Boss.SetActive (false);
+				Madness = 0;
 		}
 }
