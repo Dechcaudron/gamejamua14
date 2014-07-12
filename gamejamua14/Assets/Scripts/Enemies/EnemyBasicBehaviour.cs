@@ -6,14 +6,19 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 
 		public static GameControl GameCtrl;
 
+		public static NightmareRoomBehaviour myRoomBehaviour;
+
 		public int MaxHealth;
 		protected float	health;
 		[SerializeField]
 		protected float
 				damage;
 
+		[SerializeField]
+		protected float
+				madnessCharge;
+
 		public bool busy;
-		//public bool Damage;
 		public bool Die;
 		public bool chasingPlayer;
 
@@ -57,6 +62,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 				health = 0;
 				Die = true;
 				Invoke ("fade", 3f);
+				myRoomBehaviour.LowerMadness (madnessCharge);
 		}
 
 		public float _Damage {

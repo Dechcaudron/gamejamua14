@@ -3,9 +3,20 @@ using System.Collections;
 
 public abstract class NightmareCharacterBehaviour : BasicCharacterBehaviour, IDamageable, IKillable
 {
+		public Transform Respawn;
+
 		[SerializeField]
 		private int
 				maxHealth;
+		[SerializeField]
+		private float
+				deathTime;
+
+		[SerializeField]
+		protected NightmareRoomBehaviour
+				myRoomBehaviour;
+
+		protected bool isDead;
 
 		public GameObject _OwnedBy {
 				get;
@@ -25,12 +36,24 @@ public abstract class NightmareCharacterBehaviour : BasicCharacterBehaviour, IDa
 		public void _TakeDamage (float a_damage)
 		{
 				_Health -= a_damage;
-				print ("Players health:" + _Health);
+				//print ("Players health:" + _Health);
+
+				if (_Health <= 0)
+						_Die ();
 		}
 
 		public void _Die ()
 		{
 				_Health = 0;
+				myRoomBehaviour.Close ();
+				Invoke ("revive", deathTime);
+				transform.parent.position = Respawn.position;
+		}
+
+		private void revive ()
+		{
+				_Health = _MaxHealth;
+				myRoomBehaviour.Open ();
 		}
 		
 		protected override void Start ()
@@ -39,4 +62,5 @@ public abstract class NightmareCharacterBehaviour : BasicCharacterBehaviour, IDa
 				_MaxHealth = maxHealth;
 				_Health = maxHealth;
 		}
+	
 }

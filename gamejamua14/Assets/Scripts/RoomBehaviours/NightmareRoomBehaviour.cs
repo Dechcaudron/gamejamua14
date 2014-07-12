@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public abstract class NightmareRoomBehaviour : RoomBehaviour
 {
 		public const float MadnessToBoss = 50f;
-		public const float LIGHT_INTENSITY_MULTIPLIER = 80f;
+		public const float LIGHT_INTENSITY_MULTIPLIER = 40f;
 		public GameObject Boss;
 		public List<GameObject> LightMobs;
 		public static int MAX_LIGHTMOBS_PER_SCENE = 20;
@@ -18,7 +18,7 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 
 		private bool isOpen;
 
-		void Start ()
+		protected virtual void Start ()
 		{
 				LightMobs = new List<GameObject> ();
 				Open ();
@@ -47,6 +47,13 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 		public void Close ()
 		{
 				isOpen = false;
+		}
+
+		public void LowerMadness (float a_amount)
+		{
+				Madness -= a_amount;
+				if (Madness < 0)
+						Madness = 0;
 		}
 
 		protected virtual void FixedUpdate ()

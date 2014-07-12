@@ -8,6 +8,11 @@ public class TimedDestroyer : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				Invoke ("Destroy", LifeTime);
+				Invoke ("Die", LifeTime);
+		}
+
+		void Die ()
+		{
+				Destroy (this);
 		}
 }

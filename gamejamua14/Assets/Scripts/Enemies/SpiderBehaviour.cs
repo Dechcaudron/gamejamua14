@@ -91,7 +91,7 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		public void ExtTriggerEnter (Collider a_collider)
 		{
 				if (a_collider.gameObject.tag == "Player") {
-						print ("fuck");
+						//print ("fuck");
 						SpiderPlayer.GetComponent<SpiderCharacterBehaviour> ()._TakeDamage (damage);
 				}
 		}
