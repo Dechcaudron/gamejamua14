@@ -8,6 +8,7 @@ public class References : MonoBehaviour
 		public GameObject SharkPlayer;
 
 		public GameObject Smoke;
+		public GameObject Bubbles;
 
 		void Awake ()
 		{

@@ -3,8 +3,11 @@ using System.Collections;
 
 public class SharkCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExternalTrigger
 {
-		public Animator SwordAnimator;
 		public float AttackDamage;
+		public GameObject Arrow;
+		public float CastDistance;
+		public float ShotSpeed;
+
 		public float SwimSpeed;
 		public float FloatPower;
 
@@ -21,6 +24,20 @@ public class SharkCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExt
 		protected override void ProcessMouseClicks ()
 		{
 				base.ProcessMouseClicks ();
+
+				if (Input.GetMouseButtonDown (0)) {
+						shoot ();
+				}
+		}
+
+		protected void shoot ()
+		{
+				
+				GameObject t_shot = GameObject.Instantiate (Arrow, transform.position + transform.forward * CastDistance, Quaternion.identity) as GameObject;
+				//t_shot.rigidbody.isKinematic = false;
+				t_shot.rigidbody.velocity = myCamera.transform.forward * ShotSpeed;
+				t_shot.transform.rotation.SetLookRotation (myCamera.transform.forward);
+				//t_shot.rigidbody.isKinematic = true;
 
 		}
 
