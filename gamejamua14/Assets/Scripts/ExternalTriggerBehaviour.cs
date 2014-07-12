@@ -3,11 +3,13 @@ using System.Collections;
 
 public class ExternalTriggerBehaviour : MonoBehaviour
 {
-		public MonoBehaviour MonoToTrigger;
+		[SerializeField]
+		private MonoBehaviour
+				MonoToTrigger;
 		private IReceivesExternalTrigger toTrigger;
 
 		// Use this for initialization
-		void Start ()
+		void Awake ()
 		{
 				toTrigger = MonoToTrigger as IReceivesExternalTrigger;
 
@@ -17,6 +19,7 @@ public class ExternalTriggerBehaviour : MonoBehaviour
 	
 		void OnTriggerEnter (Collider a_collider)
 		{
+				//print (toTrigger);
 				toTrigger.ExtTriggerEnter (a_collider);
 		}
 

@@ -10,14 +10,12 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		public float BuriedAmount;
 		public float RiseSpeed;
 		public GameObject AttackCollider;
-
-		protected Rigidbody rigidbody;
+	
 		protected Transform spawn;
 
 		// Use this for initialization
 		void Awake ()
 		{
-				rigidbody = GetComponent<Rigidbody> ();
 				SpiderPlayer = StaticRefs.Refs.SpiderPlayer;
 				NPC = GameObject.Find ("SpiderNPC");
 		}
@@ -43,7 +41,7 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 						if (isLocalPlayer) {
 								chaseObjective (SpiderPlayer);
 
-								if (Vector3.Distance (SpiderPlayer.transform.position, transform.position) < 0.8f) {
+								if (Vector3.Distance (SpiderPlayer.transform.position, transform.position) < 2f) {
 										InvokeRepeating ("attack", 1f, 2f);
 										InvokeRepeating ("endAttack", 1.2f, 2f);
 								} else {
@@ -93,14 +91,14 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		public void ExtTriggerEnter (Collider a_collider)
 		{
 				if (a_collider.gameObject.tag == "Player") {
+						print ("fuck");
 						SpiderPlayer.GetComponent<SpiderCharacterBehaviour> ()._TakeDamage (damage);
 				}
-
 		}
 
 		public void ExtTriggerStay (Collider a_collider)
 		{
-		
+			
 		}
 
 		public void ExtTriggerExit (Collider a_collider)
