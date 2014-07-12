@@ -7,12 +7,12 @@ public class SpiderBehaviour : EnemyBasicBehaviour
 		public bool isLocalPlayer;
 		public static GameObject SpiderPlayer;
 		public static GameObject NPC;
-		protected CharacterController Controller;
+		protected Rigidbody rigidbody;
 
 		// Use this for initialization
 		void Awake ()
 		{
-				Controller = GetComponent<CharacterController> ();
+				rigidbody = GetComponent<Rigidbody> ();
 				SpiderPlayer = StaticRefs.Refs.SpiderPlayer;
 				NPC = GameObject.Find ("SpiderNPC");
 		}
@@ -27,9 +27,9 @@ public class SpiderBehaviour : EnemyBasicBehaviour
 		{
 				checkPlayer ();
 				if (isLocalPlayer) {
-						chasePlayer (SpiderPlayer, Controller);
+					chaseObjective (SpiderPlayer, rigidbody);
 				} else {
-						chaseNPC (NPC, Controller);
+					chaseObjective (NPC, rigidbody);
 				}
 		}
 

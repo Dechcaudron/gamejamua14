@@ -93,24 +93,15 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 				}
 		}
 
-		public void chasePlayer (GameObject a_LocalPlayer, CharacterController a_controller)
+		public void chaseObjective (GameObject a_Objective, Rigidbody a_controller)
 		{
-				transform.LookAt (a_LocalPlayer.transform.position);
+				transform.LookAt (a_Objective.transform.position);
 		
 				Quaternion rotation = transform.rotation;
 				rotation.x = 0;
 				rotation.z = 0;
 				transform.rotation = rotation;
-				a_controller.SimpleMove (transform.forward * speed * Time.deltaTime);
-		}
-
-		public void chaseNPC (GameObject npc, CharacterController a_controller)
-		{
-				transform.LookAt (npc.transform.position);
-				Quaternion rotation = transform.rotation;
-				rotation.x = 0;
-				rotation.z = 0;
-				transform.rotation = rotation;
-				a_controller.SimpleMove (transform.forward * speed * Time.deltaTime);
+				//a_controller.SimpleMove (transform.forward * speed * Time.deltaTime);
+				a_controller.transform.Translate (transform.forward * speed * Time.deltaTime);
 		}
 }
