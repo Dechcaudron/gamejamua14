@@ -5,6 +5,7 @@ public class References : MonoBehaviour
 {
 		public GameObject BasicPlayer;
 		public GameObject SpiderPlayer;
+		public GameObject PiranhasPlayer;
 
 		public GameObject Smoke;
 
