@@ -5,7 +5,10 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 {
 		public Animator SwordAnimator;
 		public float AttackDamage;
-
+		public AudioClip[] DieSounds;
+		public AudioClip[] AttackSounds;
+		public AudioClip[] DamageSounds;
+		public AudioSource AudioSource;
 		private bool isAttacking;
 
 		protected override void Start ()
@@ -23,12 +26,14 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 				if (Input.GetMouseButtonDown (0)) {
 						isAttacking = true;
 						SwordAnimator.SetTrigger (HashIDs.Attack);
+						AudioSource.clip = AttackSounds [Random.Range (0, DieSounds.Length)];
+						AudioSource.Play ();
+
 				}
 		}
 
 		public void ExtTriggerEnter (Collider a_collider)
 		{
-//				print ("triggerENter");
 				if (isAttacking) {
 						isAttacking = false;
 
