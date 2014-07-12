@@ -1,14 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public abstract class NightmareRoomBehaviour : RoomBehaviour
 {
 
 		public const float MadnessToBoss = 50f;
 		public const float LIGHT_INTENSITY_MULTIPLIER = 80f;
+		public GameObject Boss;
+		public List<GameObject> LightMobs;
+		public static int MAX_LIGHTMOBS_PER_SCENE = 20;
 
 		public Light MyLight;
 
+		void Start (){
+			LightMobs = new List<GameObject> ();
+		}
 
 		public float MadnessPercentage {
 				get {
@@ -34,5 +41,18 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 
 				if (Madness > MadnessToBoss)
 						Madness = MadnessToBoss;
+
+				if (MadnessPercentage >= 1)
+						ChangeToBoss ();
 		} 
+
+		public void ChangeToBoss(){
+			for(int i = 0; i<LightMobs.Count; i++){
+				Destroy(LightMobs[i]);
+			}
+			if(Boss != null)
+		   	{
+				Boss.SetActive(true);
+			}
+		}
 }
