@@ -26,6 +26,7 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 
 		protected override void FixedUpdate ()
 		{
+				print (MadnessPercentage);
 				base.FixedUpdate ();
 		}
 

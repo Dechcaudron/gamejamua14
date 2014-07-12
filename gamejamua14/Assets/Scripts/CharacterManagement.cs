@@ -6,7 +6,7 @@ public class CharacterManagement : MonoBehaviour
 		public GameObject BasicPlayer;
 		public GameObject SpidersPlayer;
 		public GameObject SharksPlayer;
-
+	
 		private	bool expectingChange;
 		private GameObject currentPlayer;
 
@@ -19,11 +19,21 @@ public class CharacterManagement : MonoBehaviour
 		void OnTriggerExit (Collider a_collider)
 		{
 				expectingChange = true;
-
 		}
 
 		void OnTriggerStay (Collider a_collider)
 		{
+
+				switch (a_collider.name) {
+				case "TriggerSpidersExt":
+						if (BossSpiderBehaviour.IsAwake == true) {
+								currentPlayer.SetActive (false);
+								SpidersPlayer.SetActive (true);
+								currentPlayer = SpidersPlayer;
+						}
+						break;
+				}
+
 				if (!expectingChange)
 						return;
 

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class BossSpiderBehaviour : BasicBossBehaviour
 {
+		public static bool IsAwake;
+
 		public float StartHeight;
 		public float EndHeight;
 		public float DropSpeed;
@@ -24,11 +26,12 @@ public class BossSpiderBehaviour : BasicBossBehaviour
 
 		void OnEnable ()
 		{
-			
+				IsAwake = true;
 		}
 
 		void OnDisable ()
 		{
+				IsAwake = false;
 				Vector3 newPosition = transform.position;
 				newPosition.y = StartHeight;
 				transform.position = newPosition;
