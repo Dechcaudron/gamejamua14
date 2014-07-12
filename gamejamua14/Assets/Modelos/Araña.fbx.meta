@@ -1,0 +1,579 @@
+fileFormatVersion: 2
+guid: 0b9d78ce8f89bef4089325ed2fa97766
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Ara__a
+    100004: Ara__a|Bone
+    100006: Ara__a|Bone.001
+    100008: Ara__a|Bone.002
+    100010: Ara__a|Bone.003
+    100012: Ara__a|Bone.004
+    100014: Ara__a|Bone.005
+    100016: Ara__a|Bone.006
+    100018: Ara__a|Bone.007
+    100020: Ara__a|Bone.008
+    100022: Ara__a|Bone.009
+    100024: Ara__a|Bone.010
+    100026: Ara__a|Bone.011
+    100028: Ara__a|Bone.012
+    100030: Ara__a|Bone.013
+    100032: Ara__a|Bone.014
+    100034: Ara__a|Bone.015
+    100036: Ara__a|Bone.016
+    100038: Ara__a|Bone.017
+    100040: Ara__a|Bone.018
+    100042: Ara__a|Bone.019
+    100044: Ara__a|Bone.020
+    100046: Ara__a|Bone.021
+    100048: Ara__a|Bone.022
+    100050: Ara__a|Bone.023
+    100052: Ara__a|Bone.024
+    100054: Ara__a|Bone.025
+    100056: Ara__a|Bone.026
+    100058: Ara__a|Bone.027
+    100060: Ara__a|Bone.028
+    100062: Ara__a|Bone.029
+    100064: Ara__a|Bone.030
+    100066: Ara__a|Bone.031
+    100068: Ara__a|Bone.032
+    100070: Ara__a|Bone.033
+    100072: Ara__a|Bone.034
+    100074: Ara__a|Bone.035
+    100076: Ara__a|Cabeza
+    100078: Ara__a|Cuerpo.001
+    100080: Circle
+    400000: //RootNode
+    400002: Ara__a
+    400004: Ara__a|Bone
+    400006: Ara__a|Bone.001
+    400008: Ara__a|Bone.002
+    400010: Ara__a|Bone.003
+    400012: Ara__a|Bone.004
+    400014: Ara__a|Bone.005
+    400016: Ara__a|Bone.006
+    400018: Ara__a|Bone.007
+    400020: Ara__a|Bone.008
+    400022: Ara__a|Bone.009
+    400024: Ara__a|Bone.010
+    400026: Ara__a|Bone.011
+    400028: Ara__a|Bone.012
+    400030: Ara__a|Bone.013
+    400032: Ara__a|Bone.014
+    400034: Ara__a|Bone.015
+    400036: Ara__a|Bone.016
+    400038: Ara__a|Bone.017
+    400040: Ara__a|Bone.018
+    400042: Ara__a|Bone.019
+    400044: Ara__a|Bone.020
+    400046: Ara__a|Bone.021
+    400048: Ara__a|Bone.022
+    400050: Ara__a|Bone.023
+    400052: Ara__a|Bone.024
+    400054: Ara__a|Bone.025
+    400056: Ara__a|Bone.026
+    400058: Ara__a|Bone.027
+    400060: Ara__a|Bone.028
+    400062: Ara__a|Bone.029
+    400064: Ara__a|Bone.030
+    400066: Ara__a|Bone.031
+    400068: Ara__a|Bone.032
+    400070: Ara__a|Bone.033
+    400072: Ara__a|Bone.034
+    400074: Ara__a|Bone.035
+    400076: Ara__a|Cabeza
+    400078: Ara__a|Cuerpo.001
+    400080: Circle
+    4300000: Circle
+    7400000: "Ara\xF1a|Andar"
+    7400002: "Ara\xF1a|Atacar"
+    7400004: "Ara\xF1a|Espera"
+    7400006: "Ara\xF1a|Morir"
+    9500000: //RootNode
+    13700000: Circle
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: "Ara\xF1a|Andar"
+      takeName: "Ara\xF1a|Andar"
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Ara__a
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001/Ara__a|Bone.002
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001/Ara__a|Bone.002/Ara__a|Bone.003
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009/Ara__a|Bone.010
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009/Ara__a|Bone.010/Ara__a|Bone.011
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019/Ara__a|Bone.020
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019/Ara__a|Bone.020/Ara__a|Bone.021
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027/Ara__a|Bone.028
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027/Ara__a|Bone.028/Ara__a|Bone.029
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005/Ara__a|Bone.006
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005/Ara__a|Bone.006/Ara__a|Bone.007
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013/Ara__a|Bone.014
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013/Ara__a|Bone.014/Ara__a|Bone.015
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.016
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.016/Ara__a|Bone.017
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023/Ara__a|Bone.024
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023/Ara__a|Bone.024/Ara__a|Bone.025
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031/Ara__a|Bone.032
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031/Ara__a|Bone.032/Ara__a|Bone.033
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.034
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.034/Ara__a|Bone.035
+        weight: 1
+      - path: Circle
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: "Ara\xF1a|Atacar"
+      takeName: "Ara\xF1a|Atacar"
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Ara__a
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001/Ara__a|Bone.002
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001/Ara__a|Bone.002/Ara__a|Bone.003
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009/Ara__a|Bone.010
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009/Ara__a|Bone.010/Ara__a|Bone.011
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019/Ara__a|Bone.020
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019/Ara__a|Bone.020/Ara__a|Bone.021
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027/Ara__a|Bone.028
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027/Ara__a|Bone.028/Ara__a|Bone.029
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005/Ara__a|Bone.006
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005/Ara__a|Bone.006/Ara__a|Bone.007
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013/Ara__a|Bone.014
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013/Ara__a|Bone.014/Ara__a|Bone.015
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.016
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.016/Ara__a|Bone.017
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023/Ara__a|Bone.024
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023/Ara__a|Bone.024/Ara__a|Bone.025
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031/Ara__a|Bone.032
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031/Ara__a|Bone.032/Ara__a|Bone.033
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.034
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.034/Ara__a|Bone.035
+        weight: 1
+      - path: Circle
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: "Ara\xF1a|Espera"
+      takeName: "Ara\xF1a|Espera"
+      firstFrame: 0
+      lastFrame: 109
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Ara__a
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001/Ara__a|Bone.002
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001/Ara__a|Bone.002/Ara__a|Bone.003
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009/Ara__a|Bone.010
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009/Ara__a|Bone.010/Ara__a|Bone.011
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019/Ara__a|Bone.020
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019/Ara__a|Bone.020/Ara__a|Bone.021
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027/Ara__a|Bone.028
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027/Ara__a|Bone.028/Ara__a|Bone.029
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005/Ara__a|Bone.006
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005/Ara__a|Bone.006/Ara__a|Bone.007
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013/Ara__a|Bone.014
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013/Ara__a|Bone.014/Ara__a|Bone.015
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.016
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.016/Ara__a|Bone.017
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023/Ara__a|Bone.024
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023/Ara__a|Bone.024/Ara__a|Bone.025
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031/Ara__a|Bone.032
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031/Ara__a|Bone.032/Ara__a|Bone.033
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.034
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.034/Ara__a|Bone.035
+        weight: 1
+      - path: Circle
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: "Ara\xF1a|Morir"
+      takeName: "Ara\xF1a|Morir"
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Ara__a
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001/Ara__a|Bone.002
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone/Ara__a|Bone.001/Ara__a|Bone.002/Ara__a|Bone.003
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009/Ara__a|Bone.010
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.008/Ara__a|Bone.009/Ara__a|Bone.010/Ara__a|Bone.011
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019/Ara__a|Bone.020
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.018/Ara__a|Bone.019/Ara__a|Bone.020/Ara__a|Bone.021
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027/Ara__a|Bone.028
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Bone.026/Ara__a|Bone.027/Ara__a|Bone.028/Ara__a|Bone.029
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005/Ara__a|Bone.006
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.004/Ara__a|Bone.005/Ara__a|Bone.006/Ara__a|Bone.007
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013/Ara__a|Bone.014
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.012/Ara__a|Bone.013/Ara__a|Bone.014/Ara__a|Bone.015
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.016
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.016/Ara__a|Bone.017
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023/Ara__a|Bone.024
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.022/Ara__a|Bone.023/Ara__a|Bone.024/Ara__a|Bone.025
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031/Ara__a|Bone.032
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.030/Ara__a|Bone.031/Ara__a|Bone.032/Ara__a|Bone.033
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.034
+        weight: 1
+      - path: Ara__a/Ara__a|Cuerpo.001/Ara__a|Cabeza/Ara__a|Bone.034/Ara__a|Bone.035
+        weight: 1
+      - path: Circle
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
