@@ -46,9 +46,13 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 								SpiderAnimator.SetFloat (HashIDs.Speed, 1f);
 
 								if (Vector3.Distance (SpiderPlayer.transform.position, transform.position) < StopDistance) {
-										SpiderAnimator.SetTrigger (HashIDs.Attack);
-										InvokeRepeating ("attack", 1f, 2f);
-										InvokeRepeating ("endAttack", 1.2f, 2f);
+										
+										if (!IsInvoking ("attack")) {
+												SpiderAnimator.SetTrigger (HashIDs.Attack);
+												Invoke ("attack", 0.8f);
+												Invoke ("endAttack", 1f);
+										}
+
 								} else {
 										CancelInvoke ("attack");
 										CancelInvoke ("endAttack");
@@ -73,6 +77,12 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 				spawn = a_spawn;
 		}
 
+		public override void _Die ()
+		{
+				base._Die ();
+				myRoomBehaviour.LightMobs.Remove (gameObject);
+		}
+
 		private void checkPlayer ()
 		{
 				if (checkLocalPlayer (SpiderPlayer)) {
@@ -86,6 +96,8 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		{
 				if (transform.position.y < spawn.position.y) {
 						transform.Translate (Vector3.up * Time.deltaTime * RiseSpeed, Space.World);
+				} else {
+						rigidbody.isKinematic = false;
 				}
 		}
 

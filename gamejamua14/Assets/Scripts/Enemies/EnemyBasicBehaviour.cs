@@ -59,7 +59,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 						_Die ();
 		}
 	
-		public void _Die ()
+		public virtual void _Die ()
 		{
 				health = 0;
 				Die = true;
@@ -120,7 +120,9 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 				rotation.z = 0;
 				transform.rotation = rotation;
 
-				transform.Translate (transform.forward * speed * Time.deltaTime, Space.World);
+				if (Vector3.Distance (transform.position, a_Objective.transform.position) > StopDistance) {
+						transform.Translate (transform.forward * speed * Time.deltaTime, Space.World);
+				}
 		}
 
 		public void chaseObjective3D (GameObject a_Objective)
@@ -130,8 +132,9 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 				Quaternion rotation = transform.rotation;
 				transform.rotation = rotation;
 			
-				if (Vector3.Distance (transform.position, a_Objective.transform.position) > StopDistance)
+				if (Vector3.Distance (transform.position, a_Objective.transform.position) > StopDistance) {
 						transform.Translate (transform.forward * speed * Time.deltaTime, Space.World);
+				}
 		}
 		
 		public void rotateArroundObjective (GameObject a_Objective)
