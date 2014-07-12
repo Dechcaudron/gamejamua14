@@ -30,13 +30,13 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger {
 		if (health > 0) {
 			checkPlayer ();
 			if (isLocalPlayer) {
-				chaseObjective (PiranhasPlayer);
+				chaseObjective3D (PiranhasPlayer);
 
 				
 			} else {
 				CancelInvoke ("attack");
 				CancelInvoke ("endAttack");
-				chaseObjective (NPC);
+				chaseObjective3D (NPC);
 			}
 		}
 	}
