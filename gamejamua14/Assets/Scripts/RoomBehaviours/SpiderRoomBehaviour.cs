@@ -4,15 +4,11 @@ using System.Collections;
 public class SpiderRoomBehaviour : NightmareRoomBehaviour
 {
 		public float EnemyDensity;
-
 		public GameObject Spiderweb;
 		public GameObject Spider;
-
 		public Transform[] SpiderSpawns;
 		public Transform[] WebSpawns;
-
 		public float SecondsBetweenWaves;
-
 		private int currentCount;
 
 		void Start ()
@@ -42,18 +38,14 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 				if (MadnessPercentage < 0.33) {
 						//Spawn little shit
 						while (t_leftToSpawn-- >0) {
-								GameObject t_newSpider = GameObject.Instantiate (Spider) as GameObject;
-
-								t_newSpider.transform.position = SpiderSpawns.GetRandomTransform ().position;
+								spawnSpider (SpiderSpawns.GetRandomTransform ());
 						}
 
 				} else if (MadnessPercentage < 0.66) {
 						//Spawn spiderwebs and little shit
 						while (t_leftToSpawn-->t_toSpawn*0.2) {
 								//Little shit
-								GameObject t_newSpider = GameObject.Instantiate (Spider) as GameObject;
-				
-								t_newSpider.transform.position = SpiderSpawns.GetRandomTransform ().position;
+								spawnSpider (SpiderSpawns.GetRandomTransform ());
 						}
 						while (t_leftToSpawn-->0) {					
 								//Spiderwebs
@@ -65,9 +57,7 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 						//Spawn the shitload
 						while (t_leftToSpawn-->t_toSpawn*0.5) {
 								//Little shit
-								GameObject t_newSpider = GameObject.Instantiate (Spider) as GameObject;
-				
-								t_newSpider.transform.position = SpiderSpawns.GetRandomTransform ().position;
+								spawnSpider (SpiderSpawns.GetRandomTransform ());
 						}
 						while (t_leftToSpawn-->0) {					
 								//Spiderwebs
@@ -76,5 +66,12 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 								t_newWeb.transform.position = SpiderSpawns.GetRandomTransform ().position;
 						}
 				}
+		}
+
+		void spawnSpider (Transform a_spawn)
+		{
+				GameObject t_newSpider = GameObject.Instantiate (Spider, a_spawn.position, Quaternion.identity) as GameObject;
+
+				t_newSpider.GetComponent<SpiderBehaviour> ().SetSpawn (a_spawn);
 		}
 }
