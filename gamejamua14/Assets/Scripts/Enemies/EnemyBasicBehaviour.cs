@@ -75,6 +75,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 		void Start ()
 		{
 				//TODO: fill this
+				GameCtrl = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameControl> ();
 		}
 
 		void FixedUpdate ()
@@ -85,33 +86,31 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 	
 		public bool checkLocalPlayer (GameObject LocalPlayer)
 		{
-			if(LocalPlayer.gameObject.activeInHierarchy){
-				return true;
-			}else
-			{
-				return false;
-			}
+				if (LocalPlayer.gameObject.activeInHierarchy) {
+						return true;
+				} else {
+						return false;
+				}
 		}
 
 		public void chasePlayer (GameObject a_LocalPlayer, CharacterController a_controller)
-
 		{
-			transform.LookAt (a_LocalPlayer.transform.position);
+				transform.LookAt (a_LocalPlayer.transform.position);
 		
-			Quaternion rotation = transform.rotation;
-			rotation.x = 0;
-			rotation.z = 0;
-			transform.rotation = rotation;
-			a_controller.SimpleMove(transform.forward * speed * Time.deltaTime);
+				Quaternion rotation = transform.rotation;
+				rotation.x = 0;
+				rotation.z = 0;
+				transform.rotation = rotation;
+				a_controller.SimpleMove (transform.forward * speed * Time.deltaTime);
 		}
 
 		public void chaseNPC (GameObject npc, CharacterController a_controller)
 		{
-			transform.LookAt (npc.transform.position);
-			Quaternion rotation = transform.rotation;
-			rotation.x = 0;
-			rotation.z = 0;
-			transform.rotation = rotation;
-			a_controller.SimpleMove(transform.forward * speed * Time.deltaTime);
+				transform.LookAt (npc.transform.position);
+				Quaternion rotation = transform.rotation;
+				rotation.x = 0;
+				rotation.z = 0;
+				transform.rotation = rotation;
+				a_controller.SimpleMove (transform.forward * speed * Time.deltaTime);
 		}
 }

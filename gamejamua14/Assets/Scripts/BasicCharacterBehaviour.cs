@@ -19,7 +19,7 @@ public class BasicCharacterBehaviour : MonoBehaviour
 		protected float verticalSpeed;
 
 		// Use this for initialization
-		void Start ()
+		protected virtual void Start ()
 		{
 		
 		}
