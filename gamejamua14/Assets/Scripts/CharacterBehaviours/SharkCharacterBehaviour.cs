@@ -5,6 +5,8 @@ public class SharkCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExt
 {
 		public Animator SwordAnimator;
 		public float AttackDamage;
+		public float SwimSpeed;
+		public float FloatPower;
 
 		private bool isAttacking;
 
@@ -20,6 +22,20 @@ public class SharkCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExt
 		{
 				base.ProcessMouseClicks ();
 
+		}
+
+		protected override void ProcessVerticalMovement ()
+		{
+				if (Input.GetKey ("space")) {
+						verticalSpeed = SwimSpeed;
+				}
+
+				if (verticalSpeed > FloatPower) {
+						verticalSpeed -= 5f * Time.deltaTime;
+				}
+
+				if (verticalSpeed < FloatPower)
+						verticalSpeed = FloatPower;
 		}
 
 		public void ExtTriggerEnter (Collider a_collider)
