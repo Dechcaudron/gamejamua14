@@ -12,7 +12,7 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger {
 	// Use this for initialization
 	void Awake ()
 	{
-		PiranhasPlayer = StaticRefs.Refs.PiranhasPlayer;
+		PiranhasPlayer = StaticRefs.Refs.SharkPlayer;
 		NPC = GameObject.Find ("PiranhasNPC");
 	}
 
