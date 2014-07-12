@@ -6,6 +6,8 @@ public class References : MonoBehaviour
 		public GameObject BasicPlayer;
 		public GameObject SpiderPlayer;
 
+		public GameObject Smoke;
+
 		void Awake ()
 		{
 				StaticRefs.Refs = this;

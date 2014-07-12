@@ -54,6 +54,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 		{
 				health = 0;
 				Die = true;
+				Invoke ("fade", 3f);
 		}
 
 		public float _Damage {
@@ -71,10 +72,18 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 
 		}
 
-		void Start ()
+		private void fade ()
+		{
+				GameObject.Instantiate (StaticRefs.Refs.Smoke, transform.position, Quaternion.identity);
+				Destroy (gameObject);
+		}
+
+		protected virtual void Start ()
 		{
 				//TODO: fill this
 				GameCtrl = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameControl> ();
+				health = MaxHealth;
+				//print (0);
 		}
 
 		void FixedUpdate ()

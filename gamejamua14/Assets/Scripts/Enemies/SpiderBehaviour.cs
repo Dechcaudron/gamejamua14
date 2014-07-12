@@ -19,12 +19,12 @@ public class SpiderBehaviour : EnemyBasicBehaviour
 				rigidbody = GetComponent<Rigidbody> ();
 				SpiderPlayer = StaticRefs.Refs.SpiderPlayer;
 				NPC = GameObject.Find ("SpiderNPC");
-				
 		}
 
-		void Start ()
+		protected override void Start ()
 		{
-				print ("started");
+				base.Start ();
+
 				transform.Translate (-Vector3.up * BuriedAmount);
 		}
 	
@@ -36,12 +36,14 @@ public class SpiderBehaviour : EnemyBasicBehaviour
 
 		void FixedUpdate ()
 		{
-				verticalMovement ();
-				checkPlayer ();
-				if (isLocalPlayer) {
-						chaseObjective (SpiderPlayer);
-				} else {
-						chaseObjective (NPC);
+				if (health > 0) {
+						verticalMovement ();
+						checkPlayer ();
+						if (isLocalPlayer) {
+								chaseObjective (SpiderPlayer);
+						} else {
+								chaseObjective (NPC);
+						}
 				}
 		}
 
