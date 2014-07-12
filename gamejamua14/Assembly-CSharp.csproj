@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Extension.cs" />
      <Compile Include="Assets\Scripts\ExternalTriggerBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
+     <Compile Include="Assets\Scripts\HashIDs.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IAttackable.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IBreakable.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
