@@ -24,12 +24,13 @@ public abstract class NightmareCharacterBehaviour : BasicCharacterBehaviour, IDa
 
 		public void _TakeDamage (float a_damage)
 		{
-
+				_Health -= a_damage;
+				print ("Players health:" + _Health);
 		}
 
 		public void _Die ()
 		{
-
+				_Health = 0;
 		}
 		
 		protected override void Start ()
