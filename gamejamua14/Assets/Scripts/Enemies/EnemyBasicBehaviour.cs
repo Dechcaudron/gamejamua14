@@ -120,4 +120,19 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 
 				transform.Translate (transform.forward * speed * Time.deltaTime, Space.World);
 		}
+
+		public void chaseObjective3D (GameObject a_Objective)
+		{
+			transform.LookAt (a_Objective.transform.position, Vector3.up);
+			
+			Quaternion rotation = transform.rotation;
+			transform.rotation = rotation;
+			
+			transform.Translate (transform.forward * speed * Time.deltaTime, Space.World);
+		}
+		
+		public void rotateArroundObjective (GameObject a_Objective)
+		{
+			//TODO: Do my magic
+		}
 }
