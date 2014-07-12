@@ -36,7 +36,7 @@ public class SharkCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExt
 				GameObject t_shot = GameObject.Instantiate (Arrow, transform.position + transform.forward * CastDistance, Quaternion.identity) as GameObject;
 				//t_shot.rigidbody.isKinematic = false;
 				t_shot.rigidbody.velocity = myCamera.transform.forward * ShotSpeed;
-				t_shot.transform.rotation.SetLookRotation (myCamera.transform.forward);
+				t_shot.transform.rotation = Quaternion.LookRotation (myCamera.transform.forward);
 				//t_shot.rigidbody.isKinematic = true;
 
 		}

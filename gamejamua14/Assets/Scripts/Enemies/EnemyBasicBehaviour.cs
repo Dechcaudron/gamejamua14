@@ -55,7 +55,7 @@ public class EnemyBasicBehaviour : MonoBehaviour, IKillable, IAttackable
 				//print ("ouch");
 				//Damage = true;
 				health -= a_damage;
-				if (health <= 0)
+				if (health <= 0 && Die == false)
 						_Die ();
 		}
 	

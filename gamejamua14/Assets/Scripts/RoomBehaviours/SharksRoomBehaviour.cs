@@ -7,8 +7,9 @@ public class SharksRoomBehaviour : NightmareRoomBehaviour
 		public float EnemyDensity;
 		public GameObject Piranha;
 		public GameObject PiranhaSpot;
+		public GameObject Shark;
 		public Transform[] PiranhaSpawns;
-		public Transform[] WebSpawns;
+		public Transform[] PiranhaSpotSpawns;
 		public float SecondsBetweenWaves;
 
 		// Use this for initialization
@@ -45,7 +46,7 @@ public class SharksRoomBehaviour : NightmareRoomBehaviour
 								//piranhaspots
 								GameObject t_newSpot = GameObject.Instantiate (PiranhaSpot) as GameObject;
 				
-								t_newSpot.transform.position = PiranhaSpawns.GetRandomTransform ().position;
+								t_newSpot.transform.position = PiranhaSpotSpawns.GetRandomTransform ().position;
 						}
 				} else {
 						//Spawn the shitload
@@ -54,10 +55,10 @@ public class SharksRoomBehaviour : NightmareRoomBehaviour
 								spawnPiranha (PiranhaSpawns.GetRandomTransform ());
 						}
 						while (t_leftToSpawn-->0) {					
-								//Spiderwebs
-								GameObject t_newSpot = GameObject.Instantiate (PiranhaSpot) as GameObject;
+								//Shark
+								GameObject t_newSpot = GameObject.Instantiate (Shark) as GameObject;
 				
-								t_newSpot.transform.position = PiranhaSpawns.GetRandomTransform ().position;
+								t_newSpot.transform.position = PiranhaSpotSpawns.GetRandomTransform ().position;
 						}
 				}
 		
@@ -68,7 +69,7 @@ public class SharksRoomBehaviour : NightmareRoomBehaviour
 				if (LightMobs.Count < NightmareRoomBehaviour.MAX_LIGHTMOBS_PER_SCENE) {
 						GameObject t_newPiranha = GameObject.Instantiate (Piranha, a_spawn.position, Quaternion.identity) as GameObject;
 						LightMobs.Add (t_newPiranha);
-						t_newPiranha.GetComponent<SpiderBehaviour> ().SetSpawn (a_spawn);
+						//t_newPiranha.GetComponent<PiranhasBehaviour> ().SetSpawn (a_spawn);
 				}
 		}
 }
