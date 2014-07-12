@@ -9,6 +9,7 @@ public class GlobalSoundControl : MonoBehaviour
 		public AudioClip[] PiranhasClips;
 		public AudioClip[] PanelsClips;
 		public AudioClip[] RobotsClips;
+		public AudioClip[] BossesClips;
 		public AudioClip DieClips;
 		[Range(0.1f, 1f)]
 		public float
