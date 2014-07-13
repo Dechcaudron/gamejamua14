@@ -17,11 +17,14 @@ public class GlobalSoundControl : MonoBehaviour
 		private  int currentAudioSource;
 		private  AudioClip[] CurrentTheme;
 		private  bool switchingTheme;
+		public float MAX_MUSIC_VOLUME;
+		public float MIN_MUSIC_VOLUME = 0.1f;
 	
 		void Start ()
 		{
 				StaticRefs.Refs.GlobalSound = this;
 				currentAudioSource = 0;
+				MAX_MUSIC_VOLUME = AudioSources [0].volume;
 				switchingTheme = false;
 				CurrentTheme = AtmosphereClips;
 				PlayNextClip ();
@@ -30,10 +33,10 @@ public class GlobalSoundControl : MonoBehaviour
 		void Update ()
 		{
 				if (switchingTheme == true) {				
-						if (AudioSources [currentAudioSource].volume < 0.8) {	
+						if (AudioSources [currentAudioSource].volume < MAX_MUSIC_VOLUME) {	
 								FadeIn ();
 						}
-						if (AudioSources [getSecondaryAudioSource ()].volume > 0.1) {
+						if (AudioSources [getSecondaryAudioSource ()].volume > MIN_MUSIC_VOLUME) {
 								FadeOut ();
 						} else {
 								AudioSources [getSecondaryAudioSource ()].Stop ();
@@ -100,14 +103,14 @@ public class GlobalSoundControl : MonoBehaviour
 	
 		private void setSwitchingVolumes ()
 		{
-				AudioSources [currentAudioSource].volume = (float)0.1;
-				AudioSources [getSecondaryAudioSource ()].volume = (float)0.8;
+				AudioSources [currentAudioSource].volume = (float)MIN_MUSIC_VOLUME;
+				AudioSources [getSecondaryAudioSource ()].volume = (float)MAX_MUSIC_VOLUME;
 		}
 	
 		private void setDefaultVolumes ()
 		{
-				AudioSources [currentAudioSource].volume = (float)0.8;
-				AudioSources [getSecondaryAudioSource ()].volume = (float)0.8;
+				AudioSources [currentAudioSource].volume = (float)MAX_MUSIC_VOLUME;
+				AudioSources [getSecondaryAudioSource ()].volume = (float)MAX_MUSIC_VOLUME;
 		}
 	
 		private void FadeIn ()

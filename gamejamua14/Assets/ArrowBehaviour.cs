@@ -5,6 +5,16 @@ public class ArrowBehaviour : MonoBehaviour
 {
 		public float TimeToDie;
 		public float Damage;
+		public AudioSource audioSource;
+		public AudioClip launchSound;
+
+		void Start ()
+		{
+				audioSource.clip = launchSound;
+				audioSource.volume = 1;
+				audioSource.loop = false;
+				audioSource.Play ();
+		}
 
 		void OnCollisionEnter (Collision a_collision)
 		{
