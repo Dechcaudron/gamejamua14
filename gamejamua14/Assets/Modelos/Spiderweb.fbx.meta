@@ -1,23 +1,17 @@
 fileFormatVersion: 2
-guid: 31eece35ad48d154c8373fa688dce648
+guid: 4eb4b5ca2ebd44053813fae7a589b29f
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Diban_Patas
-    100004: Diban_Reposadera
     400000: //RootNode
-    400002: Diban_Patas
-    400004: Diban_Reposadera
-    2300000: Diban_Patas
-    2300002: Diban_Reposadera
-    3300000: Diban_Patas
-    3300002: Diban_Reposadera
-    4300000: Diban_Patas
-    4300002: Diban_Reposadera
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cylinder
+    7400000: Default Take
     9500000: //RootNode
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
@@ -35,7 +29,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .449999988
+    globalScale: .400000006
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

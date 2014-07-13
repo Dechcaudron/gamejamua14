@@ -13,15 +13,12 @@ public class SpiderwebBehaviour : EnemyBasicBehaviour
 
 		protected override void Start ()
 		{
-				counter = 0;
+				InvokeRepeating ("spawn", SpawnTime, SpawnTime);
 		}
 
 		void FixedUpdate ()
 		{
-				counter++;
-				if (counter / (1 / Time.fixedDeltaTime) >= SpawnTime) {
-						spawn ();
-				}
+
 		}
 
 		private void spawn ()

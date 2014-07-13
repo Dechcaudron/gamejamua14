@@ -11,6 +11,8 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 		public Transform[] WebSpawns;
 		public float SecondsBetweenWaves;
 		public static List<GameObject> Mobs;
+
+		public Material webMaterial;
 	
 		protected override void Start ()
 		{
@@ -28,6 +30,8 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 		{
 				//print (MadnessPercentage);
 				base.FixedUpdate ();
+
+				webMaterial.SetFloat ("_Cutoff", -MadnessPercentage + 1f);
 		}
 
 		void SpawnWave ()
