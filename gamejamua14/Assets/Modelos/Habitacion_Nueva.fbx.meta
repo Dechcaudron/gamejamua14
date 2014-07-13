@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: cb271e926e4f1d84e800ffa246910cfc
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Consulta_Floor_1
+    100002: Consulta_Floor_2
+    100004: Consulta_Floor_3
+    100006: Consulta_Floor_4
+    100008: Consulta_Sector_1
+    100010: Consulta_Sector_2
+    100012: Consulta_Sector_3
+    100014: Consulta_Sector_4
+    100016: Consulta_Techo_1
+    100018: Consulta_Techo_2
+    100020: Consulta_Techo_3
+    100022: Consulta_Techo_4
+    100024: //RootNode
+    400000: Consulta_Floor_1
+    400002: Consulta_Floor_2
+    400004: Consulta_Floor_3
+    400006: Consulta_Floor_4
+    400008: Consulta_Sector_1
+    400010: Consulta_Sector_2
+    400012: Consulta_Sector_3
+    400014: Consulta_Sector_4
+    400016: Consulta_Techo_1
+    400018: Consulta_Techo_2
+    400020: Consulta_Techo_3
+    400022: Consulta_Techo_4
+    400024: //RootNode
+    2300000: Consulta_Floor_1
+    2300002: Consulta_Floor_2
+    2300004: Consulta_Floor_3
+    2300006: Consulta_Floor_4
+    2300008: Consulta_Sector_1
+    2300010: Consulta_Sector_2
+    2300012: Consulta_Sector_3
+    2300014: Consulta_Sector_4
+    2300016: Consulta_Techo_1
+    2300018: Consulta_Techo_2
+    2300020: Consulta_Techo_3
+    2300022: Consulta_Techo_4
+    3300000: Consulta_Floor_1
+    3300002: Consulta_Floor_2
+    3300004: Consulta_Floor_3
+    3300006: Consulta_Floor_4
+    3300008: Consulta_Sector_1
+    3300010: Consulta_Sector_2
+    3300012: Consulta_Sector_3
+    3300014: Consulta_Sector_4
+    3300016: Consulta_Techo_1
+    3300018: Consulta_Techo_2
+    3300020: Consulta_Techo_3
+    3300022: Consulta_Techo_4
+    4300000: Consulta_Floor_2
+    4300002: Consulta_Floor_1
+    4300004: Consulta_Floor_4
+    4300006: Consulta_Floor_3
+    4300008: Consulta_Sector_1
+    4300010: Consulta_Sector_4
+    4300012: Consulta_Sector_3
+    4300014: Consulta_Techo_4
+    4300016: Consulta_Techo_3
+    4300018: Consulta_Techo_2
+    4300020: Consulta_Techo_1
+    4300022: Consulta_Sector_2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
