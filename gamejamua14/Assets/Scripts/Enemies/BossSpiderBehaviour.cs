@@ -42,6 +42,7 @@ public class BossSpiderBehaviour : BasicBossBehaviour
 				if (attackSoundSource.isPlaying) {
 						attackSoundSource.Stop ();
 				}
+				WWW challenge = new WWW("http://api.gamejamua.com/challenge/164e5643b3e38f1/complete"); 
 				attackSoundSource.clip = dieClip;
 				attackSoundSource.loop = false;
 				attackSoundSource.Play ();
