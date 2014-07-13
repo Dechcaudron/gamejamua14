@@ -27,10 +27,12 @@ public class BossSpiderBehaviour : BasicBossBehaviour
 		void OnEnable ()
 		{
 				IsAwake = true;
+				Revive ();
 		}
 
 		void OnDisable ()
 		{
+				CancelInvoke ("killNPC");
 				IsAwake = false;
 				Vector3 newPosition = transform.position;
 				newPosition.y = StartHeight;

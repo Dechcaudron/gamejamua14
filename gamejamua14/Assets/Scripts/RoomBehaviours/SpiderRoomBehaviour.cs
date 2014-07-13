@@ -26,7 +26,7 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 
 		protected override void FixedUpdate ()
 		{
-				print (MadnessPercentage);
+				//print (MadnessPercentage);
 				base.FixedUpdate ();
 		}
 
@@ -71,6 +71,9 @@ public class SpiderRoomBehaviour : NightmareRoomBehaviour
 
 		void spawnSpider (Transform a_spawn)
 		{
+				if (BossSpiderBehaviour.IsAwake)
+						return;
+
 				if (LightMobs.Count < NightmareRoomBehaviour.MAX_LIGHTMOBS_PER_SCENE) {
 						GameObject t_newSpider = GameObject.Instantiate (Spider, a_spawn.position, Quaternion.identity) as GameObject;
 						LightMobs.Add (t_newSpider);

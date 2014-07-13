@@ -26,11 +26,14 @@ public class SpiderwebBehaviour : EnemyBasicBehaviour
 
 		private void spawn ()
 		{
+				if (BossSpiderBehaviour.IsAwake)
+						return;
+
 				if (SpiderRoomBehaviour.Mobs.Count < NightmareRoomBehaviour.MAX_LIGHTMOBS_PER_SCENE) {
-						print ("Webs: " + SpiderRoomBehaviour.Mobs.Count);
+						//print ("Webs: " + SpiderRoomBehaviour.Mobs.Count);
 						Transform t_spawnPoint = Spawns.GetRandomTransform ();
 						GameObject newSpider = GameObject.Instantiate (Spider, t_spawnPoint.position, Quaternion.identity) as GameObject;
-						SpiderRoomBehaviour.Mobs.Add(newSpider);
+						SpiderRoomBehaviour.Mobs.Add (newSpider);
 						newSpider.GetComponent<SpiderBehaviour> ().SetSpawn (t_spawnPoint);
 				}
 		}

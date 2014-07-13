@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public abstract class NightmareRoomBehaviour : RoomBehaviour
 {
 		public const float MadnessToBoss = 50f;
-		public const float LIGHT_INTENSITY_MULTIPLIER = 40f;
+		public const float LIGHT_INTENSITY_MULTIPLIER = 8f;
 		public GameObject Boss;
 		public List<GameObject> LightMobs;
 		public static int MAX_LIGHTMOBS_PER_SCENE = 20;
@@ -100,7 +100,8 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 		public void ChangeToNormal ()
 		{
 				isBossAwake = false;
-				Boss.SetActive (false);
+				
+				ResetSector ();
 		}
 
 		public void ResetSector ()
