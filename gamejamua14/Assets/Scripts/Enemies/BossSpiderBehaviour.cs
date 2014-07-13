@@ -7,7 +7,9 @@ public class BossSpiderBehaviour : BasicBossBehaviour
 		public float StartHeight;
 		public float EndHeight;
 		public float DropSpeed;
-		public AudioSource attackSound;
+		public AudioSource attackSoundSource;
+		public AudioClip attackClip;
+		public AudioClip dieClip;
 
 		protected void attack ()
 		{
@@ -28,16 +30,22 @@ public class BossSpiderBehaviour : BasicBossBehaviour
 		{
 				IsAwake = true;
 				Revive ();
-				if (!attackSound.isPlaying) {
-						attackSound.Play ();
+				if (!attackSoundSource.isPlaying) {
+						attackSoundSource.clip = attackClip;
+						attackSoundSource.loop = true;
+						attackSoundSource.Play ();
 				}
 		}
 
 		void OnDisable ()
 		{
-				if (attackSound.isPlaying) {
-						attackSound.Stop ();
+				if (attackSoundSource.isPlaying) {
+						attackSoundSource.Stop ();
 				}
+				attackSoundSource.clip = dieClip;
+				attackSoundSource.loop = false;
+				attackSoundSource.Play ();
+
 				CancelInvoke ("killNPC");
 				IsAwake = false;
 				Vector3 newPosition = transform.position;

@@ -16,7 +16,7 @@ public class GlobalSoundControl : MonoBehaviour
 				fadeSteps;
 		private  int currentAudioSource;
 		private  AudioClip[] CurrentTheme;
-		private  bool switchingTheme;
+		public  bool switchingTheme;
 		public float MAX_MUSIC_VOLUME;
 		public float MIN_MUSIC_VOLUME = 0.1f;
 	
