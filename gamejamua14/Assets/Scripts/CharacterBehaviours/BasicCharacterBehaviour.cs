@@ -17,6 +17,9 @@ public class BasicCharacterBehaviour : MonoBehaviour
 		public Transform ReferenceTransform;
 
 		protected float verticalSpeed;
+		public Animator MyAnimator;
+
+		protected bool isAttacking;
 
 		// Use this for initialization
 		protected virtual void Start ()
@@ -42,12 +45,11 @@ public class BasicCharacterBehaviour : MonoBehaviour
 
 				t_movement += Input.GetAxis ("Vertical") * MovementSpeed * transform.forward;
 				t_movement += Input.GetAxis ("Horizontal") * MovementSpeed * transform.right;
-				t_movement.y = myCharacterController.velocity.y + Physics.gravity.y * Time.deltaTime * 3.5f + verticalSpeed;
-
-				
+				MyAnimator.SetFloat ("Speed", t_movement.magnitude);
+				t_movement.y = myCharacterController.velocity.y + Physics.gravity.y * Time.deltaTime * 3.5f + verticalSpeed;				
 
 				myCharacterController.Move (t_movement * Time.deltaTime);
-						
+								
 				//Rotation around x
 				myCamera.transform.RotateAround (ReferenceTransform.position, ReferenceTransform.right, -Input.GetAxis ("Mouse Y") * Time.deltaTime * CameraSpeed);
 				//Rotation around y
@@ -58,6 +60,7 @@ public class BasicCharacterBehaviour : MonoBehaviour
 		{
 				if (Input.GetKeyDown ("space") && myCharacterController.isGrounded) {
 						verticalSpeed = JumpAmount;
+						MyAnimator.SetTrigger ("Jump");
 						return;
 				}
 

@@ -35,6 +35,7 @@ public abstract class NightmareCharacterBehaviour : BasicCharacterBehaviour, IDa
 
 		public void _TakeDamage (float a_damage)
 		{
+				MyAnimator.SetTrigger ("Suffer");
 				_Health -= a_damage;
 				print ("Players health:" + _Health);
 

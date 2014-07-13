@@ -10,7 +10,6 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 		public AudioClip[] AttackSounds;
 		public AudioClip[] DamageSounds;
 		public AudioSource AudioSource;
-		private bool isAttacking;
 
 		protected override void Start ()
 		{
@@ -26,9 +25,10 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 
 				if (Input.GetMouseButtonDown (0) && !IsInvoking ("finishAttack")) {
 						isAttacking = true;
-						SwordAnimator.SetTrigger (HashIDs.Attack);
+						MyAnimator.SetTrigger ("Attack");
 						Invoke ("startAttackSound", 0.1f);
 						Invoke ("finishAttack", 0.65f);
+						MyAnimator.SetTrigger ("Attack");
 				}
 		}
 
@@ -51,7 +51,6 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 						try {
 								a_collider.GetComponent<EnemyBasicBehaviour> ()._TakeDamage (AttackDamage);
 						} catch (NullReferenceException e) {
-								print (0);
 								a_collider.GetComponent<BasicBossBehaviour> ()._TakeDamage (AttackDamage);
 						}
 						

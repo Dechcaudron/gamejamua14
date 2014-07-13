@@ -11,8 +11,6 @@ public class SharkCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExt
 		public float SwimSpeed;
 		public float FloatPower;
 
-		private bool isAttacking;
-
 		protected override void Start ()
 		{
 				base.Start ();
