@@ -11,6 +11,7 @@ public class References : MonoBehaviour
 		public GameObject Bubbles;
 
 		public GlobalSoundControl GlobalSound;
+		public GameControl GameControl;
 
 		void Awake ()
 		{

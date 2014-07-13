@@ -6,19 +6,15 @@ public class BasicCharacterBehaviour : MonoBehaviour
 		public float MovementSpeed;
 		public float CameraSpeed;
 		public float JumpAmount;
-
 		[SerializeField]
 		protected CharacterController
 				myCharacterController;
 		[SerializeField]
 		protected Camera
 				myCamera;
-
 		public Transform ReferenceTransform;
-
 		protected float verticalSpeed;
 		public Animator MyAnimator;
-
 		protected bool isAttacking;
 
 		// Use this for initialization
@@ -75,7 +71,9 @@ public class BasicCharacterBehaviour : MonoBehaviour
 
 		protected virtual void ProcessMouseClicks ()
 		{
-
+				if (!StaticRefs.Refs.GameControl.isGameOn && Input.GetMouseButtonDown (0)) {
+						Application.LoadLevel ("MainGame");
+				}
 		}
 
 

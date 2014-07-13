@@ -8,10 +8,11 @@ public class GameControl : MonoBehaviour
 		public GUIText looselabel;
 		public GUIText time;
 		private DateTime startTime;
-		private bool isGameOn;
+		public bool isGameOn;
 
 		void Start ()
 		{
+				StaticRefs.Refs.GameControl = this;
 				Screen.lockCursor = true;
 				startTime = DateTime.Now;
 				isGameOn = true;
