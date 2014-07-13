@@ -10,6 +10,8 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 
 		public GameObject AttackCollider;
 
+		public Animator MyAnimator;
+
 		// Use this for initialization
 		void Awake ()
 		{
@@ -29,6 +31,12 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 	
 		}
 
+		public override void _Die ()
+		{
+				base._Die ();
+				MyAnimator.SetTrigger (HashIDs.Die);
+		}
+
 		protected void FixedUpdate ()
 		{
 				if (health > 0) {
@@ -40,13 +48,16 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 												//Attack
 												Invoke ("attack", 0.8f);
 												Invoke ("endAttack", 1f);
+												MyAnimator.SetTrigger (HashIDs.Attack);
 										}
 								} else {
+										MyAnimator.SetTrigger (HashIDs.GoIdle);
 										CancelInvoke ("attack");
 										CancelInvoke ("endAttack");
 								}
 
 						} else {
+								MyAnimator.SetTrigger (HashIDs.GoIdle);
 								CancelInvoke ("attack");
 								CancelInvoke ("endAttack");
 								chaseObjective3D (NPC);
