@@ -15,6 +15,9 @@ public class CharacterManagement : MonoBehaviour
 		{
 				expectingChange = false;
 				currentPlayer = BasicPlayer;
+				audioResource.clip = audioClips [0];
+				audioResource.volume = 1;	
+				audioResource.loop = true;
 		}
 
 		void OnTriggerExit (Collider a_collider)
@@ -60,8 +63,6 @@ public class CharacterManagement : MonoBehaviour
 				case "TriggerSharks":
 						SharksPlayer.SetActive (true);
 						currentPlayer = SharksPlayer;
-						audioResource.clip = audioClips [0];
-						audioResource.loop = true;
 						audioResource.Play ();
 						break;
 				}
