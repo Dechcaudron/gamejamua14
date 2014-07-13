@@ -4,6 +4,7 @@ using System.Collections;
 public class GameControl : MonoBehaviour
 {
 		public float MadnessIncreaseSpeed;
+		public GUIText looselabel;
 
 		void Start ()
 		{
@@ -12,6 +13,7 @@ public class GameControl : MonoBehaviour
 
 		public void EndGame ()
 		{
+				looselabel.gameObject.SetActive (true);
 				print ("Has perdido");
 		}
 }

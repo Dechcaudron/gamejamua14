@@ -165,7 +165,7 @@ public class GlobalSoundControl : MonoBehaviour
 		
 		public void ChangeToBoss (int theme)
 		{
-				PlayClip (theme, BossesClips);
+			changeTheme (BossesClips);
 		}
 	
 }
