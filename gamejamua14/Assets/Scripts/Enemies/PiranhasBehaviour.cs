@@ -22,6 +22,7 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		// Use this for initialization
 		protected override void Start ()
 		{
+
 				base.Start ();
 		}
 	
@@ -35,7 +36,7 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		{
 				base._Die ();
 				MyAnimator.SetTrigger (HashIDs.Die);
-				WWW challenge = new WWW("http://api.gamejamua.com/challenge/4c1fc4becb45935/complete");
+				WWW challenge = new WWW ("http://api.gamejamua.com/challenge/4c1fc4becb45935/complete");
 		}
 
 		protected void FixedUpdate ()
