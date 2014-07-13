@@ -20,7 +20,7 @@ public class BasicCharacterBehaviour : MonoBehaviour
 		// Use this for initialization
 		protected virtual void Start ()
 		{
-		
+				MyAnimator.SetBool ("InWater", false);
 		}
 
 		void FixedUpdate ()

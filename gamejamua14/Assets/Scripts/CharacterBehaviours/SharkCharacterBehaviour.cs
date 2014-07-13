@@ -17,14 +17,16 @@ public class SharkCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExt
 
 				StaticRefs.Refs.SharkPlayer = gameObject;
 				gameObject.SetActive (false);
+				
 		}
 
 		protected override void ProcessMouseClicks ()
 		{
 				base.ProcessMouseClicks ();
 
-				if (Input.GetMouseButtonDown (0)) {
-						shoot ();
+				if (Input.GetMouseButtonDown (0) && IsInvoking ("shoot") == false) {
+						MyAnimator.SetTrigger ("Attack");
+						Invoke ("shoot", 0.3f);
 				}
 		}
 
@@ -41,6 +43,7 @@ public class SharkCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExt
 
 		protected override void ProcessVerticalMovement ()
 		{
+				MyAnimator.SetBool ("InWater", true);
 				if (Input.GetKey ("space")) {
 						verticalSpeed = SwimSpeed;
 				}
@@ -67,4 +70,5 @@ public class SharkCharacterBehaviour : NightmareCharacterBehaviour, IReceivesExt
 		{
 		
 		}
+
 }
