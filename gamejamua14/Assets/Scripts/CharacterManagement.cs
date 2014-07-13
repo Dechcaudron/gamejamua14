@@ -63,7 +63,9 @@ public class CharacterManagement : MonoBehaviour
 				case "TriggerSharks":
 						SharksPlayer.SetActive (true);
 						currentPlayer = SharksPlayer;
-						audioResource.Play ();
+						if (!audioResource.isPlaying) {				
+								audioResource.Play ();
+						}
 						break;
 				}
 
