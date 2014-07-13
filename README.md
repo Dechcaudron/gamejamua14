@@ -24,7 +24,7 @@ Aguanta el máximo tiempo posible, ese es tu único objetivo.
 * All songs are from ([http://www.jamendo.com/][5]) and are royalty free. (Akashic Records and J.L.T.)
 
 
-##License.
+##License
 
 	Copyright 2014 Cibernaranja
 
