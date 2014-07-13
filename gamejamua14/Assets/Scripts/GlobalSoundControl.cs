@@ -24,9 +24,9 @@ public class GlobalSoundControl : MonoBehaviour
 		{
 				StaticRefs.Refs.GlobalSound = this;
 				currentAudioSource = 0;
-				MAX_MUSIC_VOLUME = AudioSources [0].volume;
 				switchingTheme = false;
 				CurrentTheme = AtmosphereClips;
+				setDefaultVolumes ();
 				PlayNextClip ();
 		}
 	
