@@ -5,7 +5,7 @@ gamejamua14:PHOBIA
 ##Overview
 **Juego desarrollado en 48hr para la GamerjamUA14.**
 
-Como terapéuta experto en el transtornos de sueño, deberás que ayudar a tus pacientes a sobrevivir a sus propias pesadillas,
+Como terapeuta experto en el transtornos de sueño, deberás que ayudar a tus pacientes a sobrevivir a sus propias pesadillas,
 
 ##Screenshoot
 
@@ -16,6 +16,10 @@ Como terapéuta experto en el transtornos de sueño, deberás que ayudar a tus p
 * **Héctor Barreras Almarcha** ([Dechcaudron][1]).
 * **Miguel Catalan Bañuls** ([MiguelCatalan][2]).
 * **Vicente Quiles Zamora** ([vicenteloco][3]).
+
+##External resources
+* All sounds are from ([http://www.freesfx.co.uk/][4]) and are royalty free.
+* All songs are from ([http://www.jamendo.com/][5]) and are royalty free. (Akashic Records and J.L.T.)
 
 
 ##License.
@@ -39,3 +43,5 @@ Como terapéuta experto en el transtornos de sueño, deberás que ayudar a tus p
 [1]: https://github.com/Dechcaudron
 [2]: https://github.com/MiguelCatalan
 [3]: https://github.com/vicenteloco
+[4]: http://www.freesfx.co.uk/
+[5]: http://www.jamendo.com/
