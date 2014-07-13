@@ -26,8 +26,8 @@ public class SpiderCharacterBehaviour : NightmareCharacterBehaviour, IReceivesEx
 				if (Input.GetMouseButtonDown (0) && !IsInvoking ("finishAttack")) {
 						isAttacking = true;
 						MyAnimator.SetTrigger ("Attack");
-						Invoke ("startAttackSound", 0.1f);
-						Invoke ("finishAttack", 0.65f);
+						Invoke ("startAttackSound", 0.5f);
+						Invoke ("finishAttack", 0.7f);
 						MyAnimator.SetTrigger ("Attack");
 				}
 		}
