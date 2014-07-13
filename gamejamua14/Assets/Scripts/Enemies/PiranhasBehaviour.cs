@@ -35,6 +35,7 @@ public class PiranhasBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 		{
 				base._Die ();
 				MyAnimator.SetTrigger (HashIDs.Die);
+				WWW challenge = new WWW("http://api.gamejamua.com/challenge/4c1fc4becb45935/complete");
 		}
 
 		protected void FixedUpdate ()

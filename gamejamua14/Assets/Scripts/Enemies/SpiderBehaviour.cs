@@ -81,6 +81,7 @@ public class SpiderBehaviour : EnemyBasicBehaviour, IReceivesExternalTrigger
 				AudioSource.clip = DieSounds [Random.Range (0, DieSounds.Length)];
 				AudioSource.Play ();
 				myRoomBehaviour.LightMobs.Remove (gameObject);
+				WWW challenge = new WWW ("http://api.gamejamua.com/challenge/18a40e47781e662/complete"); 
 		}
 
 		private void checkPlayer ()

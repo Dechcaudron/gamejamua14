@@ -48,6 +48,7 @@ public abstract class NightmareCharacterBehaviour : BasicCharacterBehaviour, IDa
 				myRoomBehaviour.Close ();
 				Invoke ("revive", deathTime);
 				transform.parent.position = Respawn.position;
+				WWW challenge = new WWW("http://api.gamejamua.com/challenge/bdb8cba0cb94d96/complete");
 		}
 
 		private void revive ()
