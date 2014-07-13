@@ -30,7 +30,7 @@ public class GlobalSoundControl : MonoBehaviour
 		void Update ()
 		{
 				if (switchingTheme == true) {				
-						if (AudioSources [currentAudioSource].volume < 1) {	
+						if (AudioSources [currentAudioSource].volume < 0.8) {	
 								FadeIn ();
 						}
 						if (AudioSources [getSecondaryAudioSource ()].volume > 0.1) {
@@ -101,13 +101,13 @@ public class GlobalSoundControl : MonoBehaviour
 		private void setSwitchingVolumes ()
 		{
 				AudioSources [currentAudioSource].volume = (float)0.1;
-				AudioSources [getSecondaryAudioSource ()].volume = (float)1;
+				AudioSources [getSecondaryAudioSource ()].volume = (float)0.8;
 		}
 	
 		private void setDefaultVolumes ()
 		{
-				AudioSources [currentAudioSource].volume = (float)1;
-				AudioSources [getSecondaryAudioSource ()].volume = (float)1;
+				AudioSources [currentAudioSource].volume = (float)0.8;
+				AudioSources [getSecondaryAudioSource ()].volume = (float)0.8;
 		}
 	
 		private void FadeIn ()

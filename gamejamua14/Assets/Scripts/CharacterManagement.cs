@@ -6,9 +6,10 @@ public class CharacterManagement : MonoBehaviour
 		public GameObject BasicPlayer;
 		public GameObject SpidersPlayer;
 		public GameObject SharksPlayer;
-	
 		private	bool expectingChange;
 		private GameObject currentPlayer;
+		public AudioSource audioResource;
+		public AudioClip[] audioClips;
 
 		void Start ()
 		{
@@ -43,16 +44,25 @@ public class CharacterManagement : MonoBehaviour
 				case "TriggerSpiders":
 						SpidersPlayer.SetActive (true);
 						currentPlayer = SpidersPlayer;
+						if (audioResource.isPlaying) {				
+								audioResource.Pause ();
+						}
 						break;
 
 				case "TriggerBase":
 						BasicPlayer.SetActive (true);
 						currentPlayer = BasicPlayer;
+						if (audioResource.isPlaying) {				
+								audioResource.Pause ();
+						}
 						break;
 
 				case "TriggerSharks":
 						SharksPlayer.SetActive (true);
 						currentPlayer = SharksPlayer;
+						audioResource.clip = audioClips [0];
+						audioResource.loop = true;
+						audioResource.Play ();
 						break;
 				}
 
