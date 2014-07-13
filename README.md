@@ -5,7 +5,9 @@ gamejamua14:PHOBIA
 ##Overview
 **Juego desarrollado en 48hr para la GamerjamUA14.**
 
-Como terapeuta experto en el transtornos de sueño, deberás que ayudar a tus pacientes a sobrevivir a sus propias pesadillas,
+Como terapeuta experto en el transtornos de sueños, deberás que ayudar a tus pacientes a sobrevivir a sus propias pesadillas de manera simultanea, pero cuidado, no será tarea facil.
+
+Aguanta el máximo tiempo posible, ese es tu único objetivo.
 
 ##Screenshoot
 
