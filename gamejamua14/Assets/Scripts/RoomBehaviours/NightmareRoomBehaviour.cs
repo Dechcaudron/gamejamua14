@@ -63,7 +63,7 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 		protected virtual void FixedUpdate ()
 		{
 				if (!isBossAwake) {
-						MyLight.intensity = MadnessPercentage * LIGHT_INTENSITY_MULTIPLIER;
+						//MyLight.intensity = MadnessPercentage * LIGHT_INTENSITY_MULTIPLIER;
 
 						if (isOpen) {
 								Walls.transform.position = new Vector3 (Walls.transform.position.x, Mathf.Lerp (Walls.transform.position.y, OpenHeight, WallSpeed), Walls.transform.position.z);
@@ -112,6 +112,6 @@ public abstract class NightmareRoomBehaviour : RoomBehaviour
 
 		private void changeMusicTheme ()
 		{
-			StaticRefs.Refs.GlobalSound.ChangeToBoss (CurrentBossTheme);
+				StaticRefs.Refs.GlobalSound.ChangeToBoss (CurrentBossTheme);
 		}
 }

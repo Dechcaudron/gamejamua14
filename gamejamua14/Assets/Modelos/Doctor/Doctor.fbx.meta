@@ -131,6 +131,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
+    motionNodeName: 
     animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
@@ -1072,7 +1073,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: .25
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -1479,252 +1480,252 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|Body
-      position: {x: .000269811484, y: .00501770712, z: .0452020951}
+      position: {x: .00674528722, y: .125442684, z: 1.13005233}
       rotation: {x: .00474779541, y: -.707340479, z: -.706841111, w: -.00474772183}
       scale: {x: .999999881, y: .999999702, z: .999999702}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|Body_Two
-      position: {x: -5.73313758e-11, y: .00602079602, z: 1.67375125e-09}
+      position: {x: -1.43328449e-09, y: .150519907, z: 4.18437835e-08}
       rotation: {x: -.000209766993, y: -4.78932538e-09, z: .00399053888, w: .999992073}
       scale: {x: 1.00000012, y: 1.00000012, z: 1.00000024}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|neck
-      position: {x: 9.22435461e-11, y: .0148411961, z: -2.93360114e-10}
+      position: {x: 2.30608865e-09, y: .371029943, z: -7.33400274e-09}
       rotation: {x: .190807253, y: .00451300433, z: -.0331921764, w: .981055856}
       scale: {x: .999999821, y: 1.00000024, z: 1}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|head
-      position: {x: -1.31070918e-10, y: .00453361403, z: 1.40985201e-09}
+      position: {x: -3.27677308e-09, y: .113340348, z: 3.52463019e-08}
       rotation: {x: -.179091781, y: -.00356458221, z: .0359093919, w: .98317039}
       scale: {x: 1, y: .999999821, z: .999999642}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|lip
-      position: {x: 1.11609224e-05, y: .00286853337, z: .0046727024}
+      position: {x: .00027902305, y: .0717133358, z: .116817571}
       rotation: {x: .855430663, y: -6.46461018e-08, z: -4.19890085e-07, w: .517917514}
       scale: {x: 1, y: .999999762, z: .999999762}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|lip upper
-      position: {x: 1.11609361e-05, y: .00286852056, z: .00467269728}
+      position: {x: .000279023399, y: .0717130154, z: .11681743}
       rotation: {x: .572414637, y: -3.68984104e-07, z: -4.66713601e-07, w: .819964349}
       scale: {x: 1, y: .999999821, z: 1}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|Scapula.L
-      position: {x: 2.91474703e-06, y: .0148412101, z: 1.80101356e-09}
+      position: {x: 7.28686791e-05, y: .371030241, z: 4.50253381e-08}
       rotation: {x: -.378900886, y: -.243799537, z: -.714721859, w: .534947276}
       scale: {x: .999999702, y: 1.00000012, z: .999999821}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|shoulder.L
-      position: {x: -9.07592668e-10, y: .0100412788, z: -1.34850364e-09}
+      position: {x: -2.26898162e-08, y: .251031965, z: -3.37125918e-08}
       rotation: {x: .194073871, y: -.322354585, z: .033605583, w: .925901473}
       scale: {x: .999999702, y: .99999994, z: 1}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|forearm.L
-      position: {x: -1.03547015e-09, y: .00988729019, z: -1.67706542e-08}
+      position: {x: -2.58867559e-08, y: .24718225, z: -4.19266371e-07}
       rotation: {x: -.0608713441, y: .221595436, z: -.0373449214, w: .972520173}
       scale: {x: 1.00000048, y: 1.00000036, z: .999999762}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|hand.L
-      position: {x: -3.37359807e-09, y: .0108715221, z: -8.40702064e-10}
+      position: {x: -8.4339959e-08, y: .271788061, z: -2.10175521e-08}
       rotation: {x: .050375551, y: -.213782102, z: .0558149815, w: .973983765}
       scale: {x: .999999881, y: 1, z: .999999881}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerFive.L
-      position: {x: .00454257801, y: .00703544635, z: -.00138616166}
+      position: {x: .113564447, y: .175886154, z: -.0346540399}
       rotation: {x: .0964165032, y: .974826038, z: -.193027526, w: .0562002771}
       scale: {x: .999999881, y: .999999762, z: 1.00000048}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_Five.L
-      position: {x: 5.39932676e-09, y: .00207927846, z: -9.89086146e-09}
+      position: {x: 1.34983168e-07, y: .0519819632, z: -2.47271544e-07}
       rotation: {x: .0692312047, y: .696649492, z: -.141313642, w: .699940681}
       scale: {x: .999999583, y: .999999821, z: 1.00000012}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerFour.L
-      position: {x: .00245065428, y: .00999225304, z: -.000608383096}
+      position: {x: .0612663552, y: .24980633, z: -.015209577}
       rotation: {x: .00133173692, y: .957939744, z: -.103065543, w: -.267819405}
       scale: {x: .999999642, y: .999999344, z: 1}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_Four.L
-      position: {x: -1.46270052e-09, y: .00327323959, z: 2.51767052e-09}
+      position: {x: -3.65675135e-08, y: .0818309933, z: 6.29417656e-08}
       rotation: {x: -.00522196013, y: .00159123854, z: -.00910769776, w: .999943614}
       scale: {x: 1.00000012, y: 1.0000006, z: 1.00000036}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger__Four.L
-      position: {x: -4.10862816e-10, y: .00210074987, z: 3.5305725e-09}
+      position: {x: -1.02715703e-08, y: .0525187477, z: 8.82643221e-08}
       rotation: {x: -3.51288406e-07, y: 6.09898336e-07, z: 9.94924903e-07, w: 1}
       scale: {x: .99999994, y: .999999762, z: 1}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerOne.L
-      position: {x: -.00377585948, y: .00951773021, z: -.000893437362}
+      position: {x: -.0943964869, y: .237943262, z: -.0223359354}
       rotation: {x: .0271126442, y: -.183297724, z: .151976705, w: .970860481}
       scale: {x: 1.00000024, y: .999999821, z: 1.00000024}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_One.L
-      position: {x: -2.83030199e-09, y: .0030282496, z: -5.02500974e-09}
+      position: {x: -7.07575509e-08, y: .0757062435, z: -1.25625249e-07}
       rotation: {x: .0401686877, y: .0802905932, z: -.00134223839, w: .995960951}
       scale: {x: 1, y: .999999821, z: .999999881}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger__One.L
-      position: {x: 9.28584143e-09, y: .00142696535, z: 2.24436092e-09}
+      position: {x: 2.32146036e-07, y: .0356741324, z: 5.61090232e-08}
       rotation: {x: -.0893902332, y: -.0769059062, z: -.00706901681, w: .992997944}
       scale: {x: .99999994, y: 1.00000024, z: 1.00000036}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerThree.L
-      position: {x: -3.07093542e-05, y: .00935926754, z: -.000837198109}
+      position: {x: -.000767733902, y: .233981684, z: -.0209299549}
       rotation: {x: .0252226964, y: -.535510123, z: .116860852, w: .836024106}
       scale: {x: 1.0000006, y: 1.00000036, z: 1.00000012}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_Three.L
-      position: {x: 5.54529933e-09, y: .00385338045, z: 1.70140912e-09}
+      position: {x: 1.38632487e-07, y: .0963345096, z: 4.25352269e-08}
       rotation: {x: .00131144444, y: .188259348, z: -.0118469913, w: .982047021}
       scale: {x: 1.00000024, y: .999999583, z: .999999702}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger__Three.L
-      position: {x: -2.83465362e-09, y: .00274443394, z: -2.18073337e-09}
+      position: {x: -7.08663421e-08, y: .068610847, z: -5.45183383e-08}
       rotation: {x: -3.93955048e-07, y: 1.3178485e-06, z: 4.76777132e-07, w: 1}
       scale: {x: .999999821, y: .999999762, z: 1.00000012}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerTwo.L
-      position: {x: -.00188338663, y: .00938693155, z: -.00073174492}
+      position: {x: -.0470846668, y: .234673306, z: -.0182936229}
       rotation: {x: -.00456583127, y: -.312723845, z: .116708919, w: .942635655}
       scale: {x: 1.00000012, y: 1.00000012, z: .99999994}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_Two.L
-      position: {x: 3.59716923e-09, y: .00370697631, z: -4.89492891e-09}
+      position: {x: 8.99292303e-08, y: .0926744118, z: -1.22373223e-07}
       rotation: {x: .00373859517, y: 4.30811997e-06, z: -.00752654672, w: .999964774}
       scale: {x: 1, y: .999999583, z: 1.00000012}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger__Two.L
-      position: {x: -2.1200961e-09, y: .0023330024, z: 4.69454431e-09}
+      position: {x: -5.30024025e-08, y: .0583250597, z: 1.17363605e-07}
       rotation: {x: 2.12534232e-07, y: -1.17375134e-06, z: 1.64551079e-06, w: 1}
       scale: {x: 1.00000012, y: .99999994, z: .99999994}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|Scapula.R
-      position: {x: 1.48917967e-09, y: .0148411961, z: 1.6856978e-09}
+      position: {x: 3.72294906e-08, y: .371029943, z: 4.2142446e-08}
       rotation: {x: -.594225526, y: .40227899, z: .553581595, w: .42262876}
       scale: {x: .99999994, y: 1.00000024, z: .999999821}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|shoulder.R
-      position: {x: 1.65244751e-09, y: .0100412788, z: 5.93915139e-09}
+      position: {x: 4.13111891e-08, y: .251031965, z: 1.4847879e-07}
       rotation: {x: .195692599, y: -.00652209576, z: .0311024301, w: .980150282}
       scale: {x: 1.00000036, y: .999999762, z: .999999702}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|forearm.R
-      position: {x: -2.18225749e-09, y: .0120105846, z: 3.45159741e-08}
+      position: {x: -5.45564376e-08, y: .300264627, z: 8.62899356e-07}
       rotation: {x: -.0691124275, y: -.00341279595, z: .0244782269, w: .997302771}
       scale: {x: 1.00000012, y: 1.00000083, z: 1.00000036}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|hand.R
-      position: {x: 1.46836127e-10, y: .00983713474, z: -1.83179036e-08}
+      position: {x: 3.67090336e-09, y: .245928377, z: -4.57947607e-07}
       rotation: {x: .0610813238, y: .00526959868, z: -.0811437443, w: .994815111}
       scale: {x: .999999702, y: .999999702, z: .999999702}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerFive.R
-      position: {x: -.00503079593, y: .00433254149, z: -.000747099111}
+      position: {x: -.125769898, y: .108313546, z: -.0186774787}
       rotation: {x: .205275491, y: -.672205925, z: .111981861, w: .702467978}
       scale: {x: 1, y: .999999881, z: .99999994}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_Five.R
-      position: {x: 3.52037466e-09, y: .00254468527, z: 2.8148936e-10}
+      position: {x: 8.80093722e-08, y: .0636171326, z: 7.03723391e-09}
       rotation: {x: -.148303121, y: -.0217443891, z: -.0325366668, w: .988167405}
       scale: {x: .999999881, y: .999999881, z: 1.00000024}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerFour.R
-      position: {x: -.00353966677, y: .00877913833, z: -2.83478203e-05}
+      position: {x: -.0884916708, y: .219478458, z: -.000708695501}
       rotation: {x: -.0237013791, y: -.687094033, z: .0928491279, w: .720221579}
       scale: {x: 1.00000012, y: .999999821, z: 1.00000036}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_Four.R
-      position: {x: 3.0246386e-10, y: .00323537248, z: 1.39610468e-09}
+      position: {x: 7.56159668e-09, y: .0808843151, z: 3.49026159e-08}
       rotation: {x: -.0184587426, y: .00460210256, z: .002549364, w: .999815822}
       scale: {x: 1.00000072, y: .999999464, z: .999999642}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger__Four.R
-      position: {x: 5.6449706e-10, y: .00179752114, z: -1.75542791e-09}
+      position: {x: 1.41124268e-08, y: .0449380279, z: -4.38856986e-08}
       rotation: {x: -.00241630175, y: -.0396821722, z: .0134090297, w: .999119461}
       scale: {x: .999999702, y: 1.00000036, z: .99999994}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerOne.R
-      position: {x: .00267661316, y: .00844764709, z: -3.85395251e-05}
+      position: {x: .0669153258, y: .211191177, z: -.000963488128}
       rotation: {x: .0901183039, y: .716369092, z: .0562790148, w: -.689584434}
       scale: {x: 1.00000024, y: 1, z: 1.00000036}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_One.R
-      position: {x: 3.47948892e-09, y: .00237342599, z: 1.95018157e-09}
+      position: {x: 8.69872281e-08, y: .059335649, z: 4.87545435e-08}
       rotation: {x: .014271657, y: .00615451299, z: -.00198038761, w: .999877274}
       scale: {x: 1.00000012, y: .999999583, z: 1}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger__One.R
-      position: {x: -1.76719717e-09, y: .00134885451, z: -3.97024502e-09}
+      position: {x: -4.41799308e-08, y: .0337213613, z: -9.9256134e-08}
       rotation: {x: .0145323034, y: -.00333627942, z: -.0195636749, w: .999697506}
       scale: {x: .99999994, y: .99999994, z: .99999994}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerThree.R
-      position: {x: -.00143451185, y: .0091498578, z: .00032406635}
+      position: {x: -.035862796, y: .228746444, z: .0081016589}
       rotation: {x: -.0539839454, y: -.702755392, z: .027036462, w: .708865106}
       scale: {x: 1.00000012, y: .999999642, z: .99999994}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_Three.R
-      position: {x: -4.54106397e-09, y: .00382670178, z: -1.96269467e-09}
+      position: {x: -1.13526603e-07, y: .095667541, z: -4.90673671e-08}
       rotation: {x: .00341949309, y: -.00610040314, z: -.0129897548, w: .999891222}
       scale: {x: 1.00000024, y: .999999821, z: .99999994}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger__Three.R
-      position: {x: 7.7968787e-09, y: .00179718877, z: -3.524811e-10}
+      position: {x: 1.94921967e-07, y: .0449297205, z: -8.81202755e-09}
       rotation: {x: -.00359814428, y: .00123381976, z: .00197890913, w: .99999088}
       scale: {x: .999999642, y: 1.00000036, z: .999999702}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|fingerTwo.R
-      position: {x: .000537746411, y: .00932454132, z: .00027147471}
+      position: {x: .01344366, y: .233113527, z: .00678686844}
       rotation: {x: .0714869127, y: .706819892, z: .0396688171, w: -.702653348}
       scale: {x: 1.00000012, y: .999999642, z: .99999994}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger_Two.R
-      position: {x: -4.71581396e-09, y: .00278766244, z: -1.47796475e-09}
+      position: {x: -1.17895347e-07, y: .0696915612, z: -3.69491175e-08}
       rotation: {x: .0265572928, y: -.00203761621, z: -.0316291861, w: .999144793}
       scale: {x: .999999821, y: .999999881, z: .999999821}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|finger__Two.R
-      position: {x: -4.92925123e-09, y: .00205379305, z: 1.76827986e-09}
+      position: {x: -1.23231274e-07, y: .0513448268, z: 4.4206999e-08}
       rotation: {x: -.00294349948, y: -.024752561, z: -.0356960744, w: -.999051809}
       scale: {x: 1.0000006, y: 1.00000024, z: 1}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|pelvis.L
-      position: {x: 2.84480466e-05, y: -.00190119864, z: 1.34258346e-06}
+      position: {x: .000711201224, y: -.0475299694, z: 3.35645855e-05}
       rotation: {x: -.600053251, y: -.374502689, z: -.599791825, w: .374077052}
       scale: {x: 1.00000012, y: .999999821, z: .999999642}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|thigh.L
-      position: {x: -1.57189595e-09, y: .00675361976, z: -5.46844969e-09}
+      position: {x: -3.92973973e-08, y: .168840498, z: -1.36711236e-07}
       rotation: {x: -.35229975, y: -.676469624, z: .249522015, w: .596667945}
       scale: {x: 1.00000012, y: .99999994, z: 1.00000024}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|twin.L
-      position: {x: -2.74061551e-09, y: .0161699373, z: 6.87927759e-09}
+      position: {x: -6.85153907e-08, y: .404248476, z: 1.71981952e-07}
       rotation: {x: .13456282, y: .0184462164, z: .0980561972, w: .985868931}
       scale: {x: 1.00000012, y: 1.00000107, z: 1.00000048}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|foot.L
-      position: {x: 4.97920727e-09, y: .0201026686, z: 2.82852453e-09}
+      position: {x: 1.24480181e-07, y: .502566695, z: 7.07131136e-08}
       rotation: {x: .714718759, y: .0347398333, z: .019073585, w: -.698288262}
       scale: {x: .99999994, y: .99999994, z: .999999642}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|pelvis.R
-      position: {x: 2.5532072e-05, y: -.00190123962, z: 1.34283107e-06}
+      position: {x: .000638301775, y: -.0475309938, z: 3.35707773e-05}
       rotation: {x: -.611977935, y: .35466975, z: .611724615, w: .354239255}
       scale: {x: .999999702, y: .999999523, z: 1.00000012}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|thigh.R
-      position: {x: 2.45606396e-10, y: .0062794527, z: -6.55111609e-09}
+      position: {x: 6.14015994e-09, y: .156986326, z: -1.63777898e-07}
       rotation: {x: -.343961507, y: .682892919, z: -.233601049, w: .600648344}
       scale: {x: 1.00000036, y: 1.00000036, z: 1.00000048}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|twin.R
-      position: {x: 2.31374475e-09, y: .0161315966, z: 2.04752237e-09}
+      position: {x: 5.78436179e-08, y: .403289914, z: 5.11880636e-08}
       rotation: {x: .134440526, y: -.0180720296, z: -.0921989828, w: .986457586}
       scale: {x: 1.00000048, y: 1.00000048, z: 1.00000107}
       transformModified: 1
     - name: Zombi_Prototipe_One_Armature|foot.R
-      position: {x: 7.27724236e-09, y: .0203219838, z: 4.42775594e-09}
+      position: {x: 1.81931057e-07, y: .508049607, z: 1.10693897e-07}
       rotation: {x: .708426833, y: -.0682984293, z: -.0451273546, w: -.701020956}
       scale: {x: 1.00000024, y: .999999583, z: .999999881}
       transformModified: 1
