@@ -14,6 +14,8 @@ public class GameControl : MonoBehaviour
 		public void EndGame ()
 		{
 				looselabel.gameObject.SetActive (true);
+				StaticRefs.Refs.GlobalSound.switchingTheme = true;
+				StaticRefs.Refs.GlobalSound.FadeOut ();
 				print ("Has perdido");
 		}
 }

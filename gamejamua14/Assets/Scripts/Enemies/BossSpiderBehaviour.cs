@@ -4,10 +4,10 @@ using System.Collections;
 public class BossSpiderBehaviour : BasicBossBehaviour
 {
 		public static bool IsAwake;
-
 		public float StartHeight;
 		public float EndHeight;
 		public float DropSpeed;
+		public AudioSource attackSound;
 
 		protected void attack ()
 		{
@@ -28,10 +28,16 @@ public class BossSpiderBehaviour : BasicBossBehaviour
 		{
 				IsAwake = true;
 				Revive ();
+				if (!attackSound.isPlaying) {
+						attackSound.Play ();
+				}
 		}
 
 		void OnDisable ()
 		{
+				if (attackSound.isPlaying) {
+						attackSound.Stop ();
+				}
 				CancelInvoke ("killNPC");
 				IsAwake = false;
 				Vector3 newPosition = transform.position;

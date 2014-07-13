@@ -113,13 +113,13 @@ public class GlobalSoundControl : MonoBehaviour
 				AudioSources [getSecondaryAudioSource ()].volume = (float)MAX_MUSIC_VOLUME;
 		}
 	
-		private void FadeIn ()
+		public void FadeIn ()
 		{
 				AudioSources [currentAudioSource].volume += ((float)fadeSteps) * Time.deltaTime;
 				print ("Fade in:" + AudioSources [currentAudioSource].volume);
 		}
 	
-		private void FadeOut ()
+		public void FadeOut ()
 		{
 				AudioSources [getSecondaryAudioSource ()].volume -= ((float)fadeSteps) * Time.deltaTime;
 				print ("Fade out:" + AudioSources [getSecondaryAudioSource ()].volume);
@@ -165,7 +165,7 @@ public class GlobalSoundControl : MonoBehaviour
 		
 		public void ChangeToBoss (int theme)
 		{
-			changeTheme (BossesClips);
+				changeTheme (BossesClips);
 		}
 	
 }
